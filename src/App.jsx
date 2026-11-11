@@ -8,58 +8,207 @@ const LEVELS = {
   extreme: { id: 'extreme', name: 'Extreme', desc: 'Nema tabua: čisto istraživanje.', style: 'neon-purple' }
 };
 
-const generators = {
-  soft: {
-    truthStarts: ["Koja je prva stvar koju si pomislio/la kad smo se", "Što najviše voliš kada ti", "Koji ti je najdraži zajednički", "Što te uvijek nasmije kod"],
-    truthEnds: ["upoznali?", "radim u krevetu?", "izlazak?", "mene?", "dodirnem?", "šapnem na uho?"],
-    dareStarts: ["Daj mi dugu masažu", "Poljubi me u", "Drži me za ruku i ispričaj mi", "Gledaj me u oči 1 minutu i reci mi"],
-    dareEnds: ["vrata.", "obraz i zadrži usne 10 sekundi.", "svoju najdražu fantaziju o nama.", "što najviše voliš na mom tijelu."],
-    nhie: ["Nikad nisam lagao/la da mi se sviđa nešto što si obukao/la.", "Nikad nisam potajno mirisao/la tvoju odjeću.", "Nikad nisam planirao/la romantični spoj u glavi a da ti nisam rekao/la."],
-    wyrA: ["Dobiti masažu cijelog tijela svaki dan", "Imati doručak u krevetu svaki dan", "Spavati zagrljen cijelu noć"],
-    wyrB: ["Dobiti strastveni poljubac svaki put kad se vidimo", "Zajedničko tuširanje svaku večer", "Da te budim poljupcima"],
-    diceActions: ["Poljubi", "Masiraj", "Pogladi", "Mazi", "Puhni u"],
-    diceParts: ["Vrat", "Obraz", "Ruku", "Kosu", "Rame"]
+/* Cjelovita, gramatički točna pitanja za parove */
+const db = {
+  tod: {
+    soft: {
+      truths: [
+        "Koja je bila tvoja prva misao kada si me prvi put vidio/la?",
+        "Koji ti je naš najdraži zajednički trenutak do sada?",
+        "Što najviše voliš na mom licu?",
+        "Koja sitnica koju radim te uvijek iznova osvoji?",
+        "Što si mislio/la o meni nakon našeg prvog spoja?",
+        "Koji je najljepši kompliment koji si ikada dobio/la od mene?",
+        "Što te kod mene najviše nasmijava?",
+        "Da moraš opisati našu vezu u tri riječi, koje bi to bile?"
+      ],
+      dares: [
+        "Masiraj mi ramena i vrat točno dvije minute.",
+        "Gledaj me ravno u oči punu minutu bez progovorene riječi.",
+        "Daj mi najduži i najnježniji zagrljaj danas.",
+        "Poljubi me u obraz i zadrži usne tamo 10 sekundi.",
+        "Ispričaj mi svoju najdražu uspomenu na nas.",
+        "Drži me za ruku dok traje sljedeća runda igre.",
+        "Pohvali tri stvari na mom tijelu koje nisu seksualne.",
+        "Nježno mi prolazi prstima kroz kosu jednu minutu."
+      ]
+    },
+    hot: {
+      truths: [
+        "Koji dio mog tijela te najviše uzbuđuje?",
+        "Koji je tvoj najdraži način na koji te dodirujem?",
+        "Kada si zadnji put sanjao/la nešto bezobrazno o nama?",
+        "Koje donje rublje koje nosim ti je najdraže?",
+        "Postoji li neko mjesto u javnosti gdje bi me volio/la poljubiti?",
+        "Što najviše voliš kada ti šapnem na uho?",
+        "Koji je tvoj najosjetljiviji dio tijela za koji mi nisi rekao/la?",
+        "Koja je tvoja najdraža fantazija koju si imao/la o meni?"
+      ],
+      dares: [
+        "Otkopčaj mi jedan komad odjeće koristeći samo jednu ruku.",
+        "Strastveno me poljubi u vrat i ostavi mokar trag.",
+        "Pleši mi u krilu punu minutu.",
+        "Skini mi majicu bez upotrebe ruku.",
+        "Liži mi vrat i ključnu kost 30 sekundi.",
+        "Dodiruj mi bedra polako odozdo prema gore.",
+        "Zaveži mi oči i poljubi me na tri različita mjesta na tijelu.",
+        "Pošalji mi najprljaviju poruku koju možeš smisliti, upravo sada."
+      ]
+    },
+    hard: {
+      truths: [
+        "Koji je tvoj najveći seksualni fetiš o kojem nismo puno pričali?",
+        "Što točno želiš da ti radim večeras u krevetu?",
+        "Koja je poza u kojoj najviše uživaš sa mnom?",
+        "Jesi li ikada razmišljao/la o tome da nas netko gleda dok vodimo ljubav?",
+        "Koji je najuzbudljiviji san koji si imao/la o meni?",
+        "Koji je tvoj najdraži trenutak iz našeg seksualnog života?",
+        "Da možeš birati samo jednu pozu do kraja života, koja bi to bila?",
+        "Što si oduvijek htio/la da probamo, a bojao/la si se pitati?"
+      ],
+      dares: [
+        "Skini sa mene sav donji veš koristeći samo zube.",
+        "Zadovoljavaj me oralno točno jednu minutu, a onda iznenada prestani.",
+        "Stavi mi ruke na leđa i ne daj mi da se mičem dok me ljubiš.",
+        "Trljaj se o mene dok oboje imamo samo donje rublje.",
+        "Napravi mi pravi, bezobrazni lap dance.",
+        "Dodiruj se pred mnom jednu minutu dok te ja samo gledam.",
+        "Ostavi mi hickey (šljivu) na skrivenom mjestu.",
+        "Šapni mi na uho točno ono što želiš da ti napravim kada igra završi."
+      ]
+    },
+    extreme: {
+      truths: [
+        "Koja je tvoja najekstremnija, najdublja fantazija o nama?",
+        "S kime od naših poznanika bi bio/la spreman/na imati trojac?",
+        "Jesi li ikada poželio/la da budem puno grublji/a prema tebi?",
+        "Što misliš o vezivanju i potpunoj dominaciji u krevetu?",
+        "Koja je najperverznija stvar koju si ikada zamislio/la da mi radiš?",
+        "Jesi li ikada razmišljao/la o seksu na javnom mjestu gdje bi nas mogli uloviti?",
+        "Postoji li neka igračka koju očajnički želiš kupiti za nas?",
+        "Koja je najprljavija stvar koju si ikada pretraživao/la na internetu?"
+      ],
+      dares: [
+        "Potpuno me skini i istraži svaki centimetar mog tijela usnama.",
+        "Zaveži mi ruke za stolicu ili krevet i radi sa mnom što god želiš tri minute.",
+        "Skini se potpuno gol/a i posluži mi piće.",
+        "Zadovolji me usnama do kraja, bez obzira na to koliko traje.",
+        "Dopusti mi da ti stavim povez na oči do kraja igre.",
+        "Upotrijebi led na mom tijelu i prati ga toplim jezikom.",
+        "Skini odjeću sa mene i koristi moje tijelo kao jastuk sljedećih 5 minuta.",
+        "Pruži mi najbezobrazniji oralni seks koji si ikada izveo/la."
+      ]
+    }
   },
-  hot: {
-    truthStarts: ["Koji dio mog tijela te", "Kada si zadnji put", "Što si oduvijek htio/la", "Koji je najbezobrazniji san koji si"],
-    truthEnds: ["najviše pali?", "masturbirao/la misleći na mene?", "isprobati sa mnom, a nisi rekao/la?", "imao/la o nama?"],
-    dareStarts: ["Skini jedan komad", "Polako mi otkopčaj", "Liži mi", "Zaveži mi oči i"],
-    dareEnds: ["moje odjeće koristeći samo zube.", "košulju/majicu dok me gledaš u oči.", "vrat sljedećih 30 sekundi.", "pogađaj gdje te ljubim."],
-    nhie: ["Nikad nisam zamišljao/la nas dvoje u javnosti.", "Nikad nisam poslao/la prljavu poruku i odmah požalio/la.", "Nikad nisam bio/la uzbuđen/a na potpuno neprikladnom mjestu."],
-    wyrA: ["Seks na stražnjem sjedalu auta", "Strastveno ljubljenje u prepunom klubu", "Da ti šapćem prljave stvari u javnosti"],
-    wyrB: ["Seks u tuš kabini", "Seks na kuhinjskom stolu", "Da ti šaljem eksplicitne slike dok si na poslu"],
-    diceActions: ["Liži", "Grickaj", "Skini odjeću sa", "Ljubi", "Snažno stisni"],
-    diceParts: ["Usne", "Stomak", "Donji dio leđa", "Bedro", "Grudi"]
+  uno: {
+    soft: [
+      "Moraš mi napraviti masažu stopala.",
+      "Otiđi po grickalice i donesi mi ih u krevet.",
+      "Pjevaj mi romantičnu pjesmu 30 sekundi.",
+      "Moraš mi dati 10 kratkih pusa po cijelom licu.",
+      "Sljedeću partiju Unoa moraš igrati držeći me za ruku."
+    ],
+    hot: [
+      "Moraš skinuti jedan komad odjeće po mom izboru.",
+      "Moraš mi dati strastveni francuski poljubac od 20 sekundi.",
+      "Igraš sljedeću partiju sjedeći mi u krilu.",
+      "Moraš mi masirati bedra dok ne počne nova partija.",
+      "Do kraja večeri ne smiješ nositi donji dio odjeće."
+    ],
+    hard: [
+      "Moraš skinuti svu odjeću sa sebe osim donjeg rublja.",
+      "Moraš mi pružiti oralno zadovoljstvo na 2 minute prije nove runde.",
+      "Moraš mi napraviti lap dance na pjesmu koju ja odaberem.",
+      "Sljedeću partiju moraš igrati potpuno u toplesu.",
+      "Moraš mi ostaviti ljubavni ugriz na bedru."
+    ],
+    extreme: [
+      "Moraš se potpuno skinuti za sljedeću partiju.",
+      "Moraš dopustiti da te vežem tijekom sljedeće runde.",
+      "Pobjednik (ja) bira jednu seksualnu želju koju moraš ispuniti odmah.",
+      "Moraš me usmeno zadovoljiti ispod stola dok traje iduća partija.",
+      "Gubiš pravo glasa u krevetu večeras – ja odlučujem o svemu."
+    ]
   },
-  hard: {
-    truthStarts: ["Koji je tvoj najveći seksualni", "Što točno želiš da ti", "Koju pozu nikad nismo", "Da imamo 24 sata u krevetu, što bi"],
-    truthEnds: ["fetiš?", "napravim večeras?", "probali, a očajnički želiš?", "bila prva stvar koju bi mi napravio/la?"],
-    dareStarts: ["Napravi mi", "Dodiruj se pred mnom", "Trljaj se o mene", "Kušaj me"],
-    dareEnds: ["lap dance u trajanju od 2 minute.", "dok te ja samo gledam i ne smijem dirati.", "sljedećih 60 sekundi u donjem rublju.", "na mjestu gdje nikad nisi."],
-    nhie: ["Nikad nisam snimao/la naš seks.", "Nikad nisam zamišljao/la igranje uloga (roleplay) s tobom.", "Nikad nisam koristio/la igračke dok sam bio/la sam/a misleći na tebe."],
-    wyrA: ["Koristiti lisice i uže večeras", "Igrati uloge gdje smo potpuni stranci u baru"],
-    wyrB: ["Biti dominantan/na cijelu noć", "Biti submisivan/na cijelu noć"],
-    diceActions: ["Ugrizni", "Siši", "Poljubi i ostavi trag na", "Veži", "Pljesni po"],
-    diceParts: ["Unutarnja strana bedra", "Stražnjica", "Međunožje", "Bradavice", "Vrat"]
+  nhie: {
+    soft: [
+      "Nikad nisam potajno mirisao/la tvoju odjeću jer mi fali tvoj miris.",
+      "Nikad nisam buljio/la u tvoju sliku dulje od minute.",
+      "Nikad nisam obukao/la nešto samo zato da bi me ti primijetio/la.",
+      "Nikad nisam planirao/la naš vjenčani dan u glavi.",
+      "Nikad nisam bio/la lagano ljubomoran/na na nekog tko je pričao s tobom."
+    ],
+    hot: [
+      "Nikad nisam zamišljao/la kako vodiš ljubav sa mnom dok smo bili u društvu.",
+      "Nikad nisam zaboravio/la donje rublje namjerno samo da te napalim.",
+      "Nikad nisam masturbirao/la razmišljajući o tebi.",
+      "Nikad nisam potajno snimio/la tvoju fotku dok si se presvlačio/la.",
+      "Nikad nisam bio/la napaljen/a na nekom potpuno neprikladnom mjestu."
+    ],
+    hard: [
+      "Nikad nisam probao/la vlastiti okus nakon oralnog seksa.",
+      "Nikad nisam zamišljao/la igranje uloga u kojem smo potpuni stranci.",
+      "Nikad nisam gledao/la pornografiju odmah nakon što si otišao/la.",
+      "Nikad nisam imao/la divlji seks u autu na javnom parkingu.",
+      "Nikad nisam potajno razmišljao/la o korištenju lisica i užeta na tebi."
+    ],
+    extreme: [
+      "Nikad nisam imao/la seks na javnom mjestu gdje smo jedva izbjegli da nas uhvate.",
+      "Nikad nisam ozbiljno maštao/la o trojcu s tobom i drugom djevojkom.",
+      "Nikad nisam ozbiljno maštao/la o trojcu s tobom i drugim dečkom.",
+      "Nikad nisam probao/la analni seks.",
+      "Nikad nisam snimao/la vlastiti kućni pornić."
+    ]
   },
-  extreme: {
-    truthStarts: ["Koju moju prljavu tajnu", "S kime bi od naših poznanika", "Koju iznimno perverznu stvar", "Koliko si puta danas"],
-    truthEnds: ["bi volio/la ostvariti večeras?", "htio/la imati trojac?", "želiš da ti napravim?", "razmišljao/la o mom tijelu?"],
-    dareStarts: ["Oralno me zadovolji", "Skini se potpuno gol/a i", "Dopusti mi da ti", "Odaberi igračku i"],
-    dareEnds: ["sljedećih 5 minuta bez prestanka.", "dopusti mi da istražim svaki centimetar tvog tijela ledom.", "stavim povez na oči do kraja igre.", "koristi je na meni kako god želiš."],
-    nhie: ["Nikad nisam imao/la seks na javnom mjestu gdje su nas mogli uloviti.", "Nikad nisam želio/la biti vezan/a i potpuno bespomoćan/na.", "Nikad nisam imao/la trojac."],
-    wyrA: ["Imati grubi seks gdje nema pravila", "Gledati mene kako se zadovoljavam dok si ti vezan/a"],
-    wyrB: ["Trojac s još jednom curom", "Da provedemo cijeli vikend goli i zaključani u sobi"],
-    diceActions: ["Pruži oralno na", "Kapaj vosak na", "Uđi u", "Stavi prste u", "Trljaj led o"],
-    diceParts: ["Osjetljiva zona", "Stražnjica", "Međunožje", "Bradavice", "Donji dio trbuha"]
+  wyr: {
+    soft: [
+      { a: "Dobivati poljupce za laku noć svaki dan", b: "Dobivati doručak u krevet svako jutro" },
+      { a: "Imati zajednički filmski maraton cijeli vikend", b: "Ići na romantični izlet u planine" },
+      { a: "Da uvijek spavamo zagrljeni", b: "Da se držimo za ruke gdje god idemo" }
+    ],
+    hot: [
+      { a: "Seksati se pod tušem", b: "Seksati se na stražnjem sjedalu auta" },
+      { a: "Da ti šapćem prostote u kinu", b: "Da te strastveno ljubim pred svim prijateljima" },
+      { a: "Dobivati prljave poruke na poslu", b: "Dobivati prljave slike na poslu" }
+    ],
+    hard: [
+      { a: "Biti vezan/a za krevet", b: "Da ti mene vežeš za krevet" },
+      { a: "Imati seks pred velikim ogledalom", b: "Snimati seks kamerom" },
+      { a: "Igrati ulogu profesora i studentice", b: "Igrati ulogu šefa i tajnice" }
+    ],
+    extreme: [
+      { a: "Imati trojac s osobom po tvom izboru", b: "Imati trojac s osobom po mom izboru" },
+      { a: "Seksati se u mračnom klubu", b: "Seksati se na plaži usred dana" },
+      { a: "Da budem potpuno grub/a prema tebi", b: "Da ti preuzmeš apsolutnu kontrolu" }
+    ]
+  },
+  // Kockice su jedine ostale iz dijelova jer je gramatika popravljena: 
+  // Imperativ (Poljubi) + Akuzativ (moj vrat) = zvuči savršeno hrvatski.
+  dice: {
+    soft: {
+      actions: ["Poljubi", "Nježno masiraj", "Pomiluj", "Puhni u", "Nasloni glavu na"],
+      parts: ["moj vrat", "moj obraz", "moju ruku", "moju kosu", "moje rame"]
+    },
+    hot: {
+      actions: ["Liži", "Lagano grickaj", "Strastveno poljubi", "Skini odjeću sa", "Čvrsto stisni"],
+      parts: ["moje usne", "moj trbuh", "moj donji dio leđa", "moje bedro", "moja prsa"]
+    },
+    hard: {
+      actions: ["Ugrizni", "Siši", "Ostavi trag (šljivu) na", "Pljesni", "Poliži usnama"],
+      parts: ["moje unutarnje bedro", "moju stražnjicu", "moje međunožje", "moju ključnu kost", "moj vrat"]
+    },
+    extreme: {
+      actions: ["Pruži oralno na", "Kapaj vrući vosak na", "Zadovolji", "Stavi led na", "Trljaj ulje o"],
+      parts: ["moju najosjetljiviju zonu", "moju stražnjicu", "moje međunožje", "moje bradavice", "moj donji dio trbuha"]
+    }
   }
 };
 
-const guessCategories = {
-  filmovi: ["Titanic", "Pedeset nijansi sive", "Gospodar prstenova", "Harry Potter", "Sam u kući", "Zgodna žena", "Američka pita", "Sumrak"],
-  stvari: ["Lisice", "Krevet", "Mobitel", "Kondom", "Svijeća", "Bič", "Vibrator", "Donje rublje", "Posteljina", "Jastuk"],
+const guessWords = {
+  filmovi: ["Titanic", "Pedeset nijansi sive", "Gospodar prstenova", "Harry Potter", "Sam u kući", "Zgodna žena", "Američka pita", "Sumrak", "Brzi i žestoki", "Bilježnica"],
+  stvari: ["Lisice", "Krevet", "Mobitel", "Kondom", "Svijeća", "Bič", "Vibrator", "Donje rublje", "Posteljina", "Jastuk", "Ogledalo"],
   radnje: ["Ljubljenje", "Vođenje ljubavi", "Tuširanje", "Kuhanje doručka", "Masaža", "Skidanje", "Spavanje", "Maženje", "Svađanje", "Plesanje"],
-  dijeloviTijela: ["Vrat", "Usne", "Stražnjica", "Bedro", "Grudi", "Trbuh", "Kosa", "Leđa", "Uho", "Ruke"]
+  dijeloviTijela: ["Vrat", "Usne", "Stražnjica", "Bedro", "Grudi", "Trbuh", "Kosa", "Leđa", "Uho", "Ruke", "Stopala"]
 };
 
 const rand = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -70,7 +219,6 @@ export default function App() {
   const [activeGame, setActiveGame] = useState(null);
   const [activeLevel, setActiveLevel] = useState(null);
 
-  // Funkcije za izvlačenje igrača
   const getRandomPlayer = () => Math.random() > 0.5 ? players.p1 : players.p2;
   const getBothPlayers = () => {
     const active = getRandomPlayer();
@@ -78,7 +226,6 @@ export default function App() {
     return { active, other };
   };
 
-  // EKRAN: UNOS IMENA
   if (!isSetup) {
     return (
       <div className="app-container">
@@ -128,10 +275,9 @@ export default function App() {
     if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
     const [currentText, setCurrentText] = useState("Odaberi Istinu ili Izazov!");
     const roll = (type) => {
-      const data = generators[activeLevel];
-      const player = getRandomPlayer();
-      if (type === 'truth') setCurrentText(`${player}, odgovori:\n\n${rand(data.truthStarts)} ${rand(data.truthEnds)}`);
-      else setCurrentText(`${player}, tvoj izazov:\n\n${rand(data.dareStarts)} ${rand(data.dareEnds)}`);
+      const p = getRandomPlayer();
+      if (type === 'truth') setCurrentText(`${p}, reci istinu:\n\n${rand(db.tod[activeLevel].truths)}`);
+      else setCurrentText(`${p}, tvoj izazov:\n\n${rand(db.tod[activeLevel].dares)}`);
     };
     return (
       <div className="app-container">
@@ -149,15 +295,11 @@ export default function App() {
   const UnoGame = () => {
     if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
     const [currentDare, setCurrentDare] = useState("Tko izgubi partiju Unoa, mora odraditi izazov!");
-    const generateUnoDare = () => {
-      const data = generators[activeLevel];
-      setCurrentDare(`Kazna za gubitnika:\n\n${rand(data.dareStarts)} ${rand(data.dareEnds)}`);
-    };
     return (
       <div className="app-container">
         <h2 className="subtitle" style={{ color: '#ea580c' }}>Uno Izazovi</h2>
         <div className="game-box" style={{ borderColor: '#ea580c' }}><p style={{ whiteSpace: 'pre-line' }}>{currentDare}</p></div>
-        <button onClick={generateUnoDare} className="btn-main bg-uno">GENERIRAJ KAZNU</button>
+        <button onClick={() => setCurrentDare(`Kazna za gubitnika:\n\n${rand(db.uno[activeLevel])}`)} className="btn-main bg-uno">GENERIRAJ KAZNU</button>
         <button onClick={() => setActiveLevel(null)} className="back-btn"><ArrowLeft size={20}/> Promijeni razinu</button>
       </div>
     );
@@ -170,7 +312,7 @@ export default function App() {
       <div className="app-container">
         <h2 className="subtitle" style={{ color: '#a855f7' }}>Nikad Nisam</h2>
         <div className="game-box" style={{ borderColor: '#a855f7' }}><p>{currentText}</p></div>
-        <button onClick={() => setCurrentText(rand(generators[activeLevel].nhie))} className="btn-main bg-nhie">SLJEDEĆE</button>
+        <button onClick={() => setCurrentText(rand(db.nhie[activeLevel]))} className="btn-main bg-nhie">SLJEDEĆE</button>
         <button onClick={() => setActiveLevel(null)} className="back-btn"><ArrowLeft size={20}/> Promijeni razinu</button>
       </div>
     );
@@ -180,13 +322,10 @@ export default function App() {
     if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
     const [header, setHeader] = useState("");
     const [opts, setOpts] = useState({ a: "Opcija A", b: "Opcija B" });
-    
     const generateWYR = () => {
-      const data = generators[activeLevel];
       setHeader(`${getRandomPlayer()} bira:`);
-      setOpts({ a: rand(data.wyrA), b: rand(data.wyrB) });
+      setOpts(rand(db.wyr[activeLevel]));
     };
-    
     return (
       <div className="app-container">
         <h2 className="subtitle" style={{ color: '#ec4899' }}>Što bi radije?</h2>
@@ -211,7 +350,7 @@ export default function App() {
           <h2 className="subtitle" style={{ color: '#10b981' }}>Pogodi Riječ</h2>
           <p style={{ color: '#9ca3af', marginBottom: '30px' }}>Jedan drži mobitel na čelu, drugi objašnjava!</p>
           <div className="grid-menu">
-            {Object.keys(guessCategories).map((cat) => (
+            {Object.keys(guessWords).map((cat) => (
               <button key={cat} onClick={() => { 
                 setActiveCategory(cat); 
                 const { active, other } = getBothPlayers();
@@ -227,7 +366,7 @@ export default function App() {
       );
     }
     return (
-      <div className="word-guess-screen" onClick={() => setWord(rand(guessCategories[activeCategory]))}>
+      <div className="word-guess-screen" onClick={() => setWord(rand(guessWords[activeCategory]))}>
         <p style={{ color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', marginBottom: '10px' }}>Kategorija: {activeCategory}</p>
         <p style={{ color: '#10b981', fontWeight: 'bold', marginBottom: '30px', textAlign: 'center' }}>{instruction}</p>
         <h1 className="word-text">{word}</h1>
@@ -240,10 +379,12 @@ export default function App() {
     if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
     const [dice, setDice] = useState({ action: "Zavrti", part: "Kockice!" });
     const rollDice = () => {
-      const data = generators[activeLevel];
       let rollCount = 0;
       const interval = setInterval(() => {
-        setDice({ action: rand(data.diceActions), part: rand(data.diceParts) });
+        setDice({ 
+          action: rand(db.dice[activeLevel].actions), 
+          part: rand(db.dice[activeLevel].parts) 
+        });
         rollCount++;
         if (rollCount > 10) clearInterval(interval);
       }, 50);
@@ -263,7 +404,6 @@ export default function App() {
     );
   };
 
-  // EKRAN: GLAVNI IZBORNIK NAKON UNOSA IMENA
   if (!activeGame) {
     return (
       <div className="app-container">
