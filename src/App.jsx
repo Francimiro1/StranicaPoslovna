@@ -238,40 +238,84 @@ const db = {
   },
   uno: {
     soft: [
-      "Moraš mi napraviti masažu stopala.",
-      "Otiđi po grickalice i donesi mi ih u krevet.",
-      "Pjevaj mi romantičnu pjesmu 30 sekundi.",
-      "Moraš mi dati 10 kratkih pusa po cijelom licu.",
-      "Sljedeću partiju Unoa moraš igrati držeći me za ruku.",
-      "Moraš mi pripremiti omiljeno piće i poslužiti mi ga.",
-      "Daj mi pet komplimenata zaredom bez prestanka.",
-      "Moraš me ljubiti u vrat dok dijeliš karte.",
-      "Zaveži mi cipele (ili me izmasiraj po leđima ako smo bosi).",
-      "Iduću partiju smiješ pričati samo šapćući."
+      "Moraš mi napraviti masažu stopala 2 minute.", "Otiđi po grickalice i donesi mi ih.", "Pjevaj mi romantičnu pjesmu 30 sekundi.", "Moraš mi dati 10 pusa po licu.", "Sljedeću partiju igraš držeći me za ruku.",
+      "Pripremi mi piće po mom izboru.", "Daj mi 5 komplimenata zaredom.", "Ljubi me u vrat dok dijeliš karte.", "Izmasiraj mi leđa preko odjeće.", "Iduću partiju pričaj isključivo šapćući.",
+      "Ispričaj mi najsmješniju zajedničku uspomenu.", "Priznaj jednu svoju slatku manu.", "Udijeli mi kompliment o mom karakteru.", "Daj mi zagrljaj od cijele minute.", "Složi mi kosu na smiješan način.",
+      "Oponašaj neku životinju po mom izboru.", "Napiši mi kratku ljubavnu poruku na papir.", "Poljubi me u oba obraza.", "Napravi mi topli čaj ili kavu.", "Igraj 2 runde zatvorenih očiju.",
+      "Masiraj mi dlanove i prste.", "Otpjevaj refren tužne pjesme dramatično.", "Nabroji 3 stvari koje jedva čekaš za vikend.", "Priznaj što si sinoć sanjao/la.", "Poljubi me u čelo.",
+      "Nacrtaj mi malo srce na ruku.", "Očisti mi naočale ili ekran mobitela.", "Pohvali moj današnji izgled.", "Zagrli me s leđa na 30 sekundi.", "Iduću partiju govori samo u rimi.",
+      "Ispričaj vic, ako se ne nasmijem, vučeš 4 karte.", "Priznaj koji ti je moj najdraži komad odjeće.", "Poljubi mi ruku kao džentlmen/dama.", "Zagrli me i ne puštaj dok ne završi runda.", "Reci mi što obožavaš kod mene, a čudno je.",
+      "Iduću rundu stoj na jednoj nozi.", "Posudi mi svoju hudicu do kraja večeri.", "Priznaj što si pomislio/la kad smo se tek upoznali.", "Daj mi 5 brzih pusa u vrh nosa.", "Igraj držeći mene pod ruku.",
+      "Sjedni mi u krilo na 30 sekundi.", "Hrani me grickalicama iduću rundu.", "Pohvali moje kulinarske vještine.", "Nasmij me u manje od 15 sekundi.", "Poljubi mi svaki prst na lijevoj ruci.",
+      "Poljubi mi svaki prst na desnoj ruci.", "Igraj iduću rundu s kartama na glavi.", "Reci mi na koju slavnu osobu te podsjećam.", "Prekriži ruke na prsima i igraj laktovima.", "Priznaj koji nam je spoj bio najbolji.",
+      "Oponašaj moj hod po sobi.", "Gledaj me u oči bez treptanja 30 sekundi.", "Odgovaraj sa 'Da, ljubavi' na sve iduću partiju.", "Donesi mi deku i ušuškaj me.", "Zagrli me tako jako da ostanem bez daha.",
+      "Priznaj neku tajnu iz djetinjstva.", "Pjevaj mi uspavanku dok miješam karte.", "Zamijeni karte sa mnom odmah.", "Daj mi mobitel na minutu da pregledam slike.", "Upiši mi novi slatki nadimak u svoj imenik.",
+      "Obećaj mi jedan spoj po mom izboru.", "Reci mi 3 stvari u kojima sam bolji/a od tebe.", "Zatvori oči i pogodi koju kartu držim.", "Zaveži ruke na leđa na minutu, ja ti vučem karte.", "Iduću rundu igraj samo lijevom rukom.",
+      "Nacrtaj mi nešto na papir u 60 sekundi.", "Poljubi me u tjeme.", "Pohvali moju frizuru u 3 rečenice.", "Drži jezik isplažen dok bacaš karte.", "Pokaži mi svoju najstariju sliku na mobitelu.",
+      "Izrecitiraj abecedu unatrag. Greška = +1 karta.", "Priznaj što si mislio/la o mojim prijateljima.", "Poljubi me u oba kapka.", "Igraj iduću rundu držeći se za nos.", "Reci mi koji je moj najveći talent.",
+      "Nabroji 3 razloga zašto si zaljubljen/a u mene.", "Prepusti mi pobjedu u ovoj rundi.", "Poljubi me svaki put kad izvučeš kartu.", "Gledaj me zaljubljeno idućih 60 sekundi.", "Dopusti mi da ti odaberem filter za sliku.",
+      "Slikajmo zajednički selfie odmah.", "Pričaj sa stranim naglaskom iduću partiju.", "Šapni mi na uho najslađu stvar koju si danas pomislio/la.", "Izmasiraj mi listove na nogama.", "Daj mi da ti napravim novu frizuru prstima.",
+      "Zagrli me i reci mi da sam ti sve na svijetu.", "Poljubi mi svaki zglob na prstima ruku.", "Reci mi koju moju osobinu najviše cijeniš.", "Pleši sa mnom spori ples jednu minutu.", "Dopusti mi da ti operem ruke toplom vodom i sapunom.",
+      "Reci mi što ti je najljepše na mom tijelu (neseksualno).", "Igraj iduću rundu sjedeći na podu.", "Napravi mi brzu masažu glave.", "Priznaj mi koju pjesmu najradije pjevaš pod tušem.", "Poljubi me 3 puta zaredom.",
+      "Zagrli me tako da čujem tvoje srce.", "Daj mi da ti nacrtam brkove olovkom za oči.", "Priznaj mi svoj najveći strah.", "Ispričaj mi neki vic koji je toliko glup da je smiješan.", "Gledaj u mene umjesto u karte cijelu rundu.",
+      "Dopusti mi da te hranim idućih 5 minuta.", "Reci mi što ti se najviše svidjelo kod mene danas.", "Poljubi me u lijevi obraz pa u desni polako.", "Moraš me zvati 'Vaše visočanstvo' iduću partiju.", "Daj mi da pregledam tvoju povijest pretraživanja (1 min).",
+      "Otpjevaj mi sretan rođendan (iako mi nije).", "Sastavi mi rimu od 4 stiha o našoj ljubavi.", "Zagrli me s leđa i nasloni bradu na moje rame.", "Dopusti mi da te poškakljam po trbuhu (5 sekundi).", "Moraš mi složiti odjeću koju sam ostavio/la na krevetu.",
+      "Priznaj mi na što trošiš najviše novca.", "Poljubi mi dlan.", "Iduću partiju drži karte na čelu umjesto u rukama.", "Reci mi što bi napravio/la da dobiješ na lotu.", "Daj mi da ti odaberem outfit za sutra.",
+      "Moraš mi dati 20 poljubaca raspoređenih po cijelom licu.", "Priznaj mi koju moju naviku zapravo voliš.", "Donesi mi čašu vode i posluži me kao konobar.", "Složi mi origami brodić ili avion.", "Reci mi jedan detalj o meni koji nitko drugi ne primjećuje.",
+      "Igraj iduću partiju prekriženih ruku.", "Poljubi me u rame.", "Dopusti mi da ti stavim malo svog parfema.", "Priznaj mi s kojom slavnom osobom bi popio/la kavu.", "Drži me za mali prst cijelu iduću rundu.",
+      "Moraš mi ispričati priču za laku noć od jedne minute.", "Reci mi gdje bi volio/la da otputujemo sljedeće godine.", "Izmasiraj mi ključnu kost.", "Dopusti mi da te počešljam.", "Poljubi me svaki put kad bacim kartu u boji koju tražiš.",
+      "Moraš mi priznati što te najviše razveselilo ovaj tjedan.", "Iduću rundu smiješ igrati samo koristeći kažiprste.", "Zagrli me jako i nemoj puštati 45 sekundi.", "Reci mi koju moju rečenicu stalno ponavljaš u glavi.", "Dopusti mi da ti napišem inicijale na ruku.",
+      "Priznaj mi koji crtić iz djetinjstva ti je bio najdraži.", "Poljubi me u bradu.", "Igraj iduću rundu žmireći na jedno oko.", "Moraš mi reći koji ti je moj najslađi izraz lica.", "Donesi mi jastuk i postavi mi ga iza leđa.",
+      "Izmasiraj mi ramena koristeći samo palčeve.", "Priznaj mi koju supermoć bi volio/la imati.", "Dopusti mi da te nahranim žlicom.", "Poljubi me u obje ruke s unutarnje strane.", "Moraš me zvati 'Ljubavi mog života' prije svakog bacanja karte.",
+      "Reci mi što te kod mene najviše inspirira.", "Iduću partiju igraj stojeći leđima okrenut/a zidu.", "Priznaj mi koju igricu najviše voliš igrati na mobitelu.", "Dopusti mi da ti očistim lice vlažnom maramicom.", "Poljubi me brzo na 5 različitih mjesta.",
+      "Zagrli me tako jako da oboje padnemo na krevet/kauč.", "Reci mi koji ti je naš najromantičniji trenutak.", "Igraj iduću partiju držeći olovku u ustima.", "Priznaj mi na koje mjesto u gradu te vežu najbolje uspomene sa mnom.", "Dopusti mi da te lagano uštipnem za obraz i kažem da si sladak/ka."
     ],
     hot: [
-      "Moraš skinuti jedan komad odjeće po mom izboru.",
-      "Moraš mi dati strastveni francuski poljubac od 20 sekundi.",
-      "Igraš sljedeću partiju sjedeći mi u krilu.",
-      "Moraš mi masirati bedra dok ne počne nova partija.",
-      "Do kraja večeri ne smiješ nositi donji dio odjeće (hlače/suknju).",
-      "Pokaži mi svoju omiljenu seksi grimasu.",
-      "Skini majicu i igraj iduću partiju u toplesu/bez majice.",
-      "Poljubi mi svaki prst na rukama polako.",
-      "Moraš mi šaptati prljave riječi na uho svakih 5 minuta.",
-      "Pošalji mi svoju seksi sliku iz druge sobe odmah sada."
+      "Moraš skinuti jedan komad odjeće po mom izboru.", "Moraš mi dati strastveni francuski poljubac od 20 sekundi.", "Igraš sljedeću partiju sjedeći mi u krilu.", "Moraš mi masirati bedra dok ne počne nova partija.", "Do kraja večeri ne smiješ nositi donji dio odjeće.",
+      "Pokaži mi svoju omiljenu seksi grimasu.", "Skini majicu i igraj iduću partiju u toplesu/bez majice.", "Poljubi mi svaki prst na rukama izrazito polako.", "Moraš mi šaptati prljave riječi na uho svakih 5 minuta.", "Pošalji mi svoju seksi sliku iz druge sobe odmah sada.",
+      "Zatvori oči, a ja ću te poljubiti na nepoznato mjesto.", "Skini mi čarape koristeći samo svoje zube.", "Iduću partiju Unoa igraj isključivo u donjem rublju.", "Ostavi mi malu, jedva vidljivu šljivu na ramenu.", "Dopusti mi da ti lagano zavežem ruke na 2 minute.",
+      "Šapni mi što točno želiš da ti napravim večeras.", "Diši mi u vrat i polako me ljubi dok miješam karte.", "Masiraj mi stražnjicu preko odjeće dok igramo.", "Igraj s raskopčanom košuljom ili podignutom majicom.", "Stisni mi bedro ispod stola i drži ruku tamo cijelu rundu.",
+      "Približi se mojim usnama, ali me nemoj poljubiti 30 sekundi.", "Skini jedan komad moje odjeće po svom izboru.", "Lezi na leđa, a ja ću sjediti na tebi dok igramo.", "Moraš mi lizati vrat točno jednu minutu.", "Natjeraj me da pocrvenim prljavim komentarom.",
+      "Zajaši moje bedro i lagano se trljaj o mene 30 sekundi.", "Poljubi me svugdje po licu, ali strogo izbjegavaj usne.", "Skini se u donje rublje i napravi mi brzi, seksi hod.", "Igraj tako da ti je jedna ruka stalno pod mojom majicom.", "Dopusti mi da pređem rukom preko tvojih intimnih dijelova.",
+      "Moraš mi gricnuti donju usnu i povući je zubima.", "Priznaj mi na kojem javnom mjestu bi me najradije zgrabio/la.", "Stavi moju ruku na svoje srce i pusti da osjetim kako kuca.", "Igraš iduću partiju na koljenima pokraj mene.", "Šapni mi najprljaviji san koji si imao/la o nama.",
+      "Poljubi moj trbuh krećući se od pupka prema gore.", "Daj mi 5 poljubaca uzduž ključne kosti.", "Stisni moju stražnjicu s obje ruke na 15 sekundi.", "Odveži mi hlače, ali ih nemoj skidati.", "Uzmi kockicu leda i prođi njome po mom vratu.",
+      "Dopusti mi da ti skinem majicu preko glave.", "Trljaj se o mene dok oboje stojimo priljubljeni.", "Iduću partiju nakon svake karte moraš strastveno uzdahnuti.", "Poljubi mi bedro iznad koljena i lagano ga ugrizi.", "Šapni mi što bi mi radio/la u mračnom kinu.",
+      "Otkopčaj moj grudnjak/šlic i ostavi tako.", "Primim te za kosu, povučem unatrag i strastveno poljubim.", "Igraj okrenut/a leđima, oslanjajući se na moja prsa.", "Mazi mi trbuh ispod majice dok miješam karte.", "Dopusti mi da ti sjednem u krilo licem prema tebi.",
+      "Priznaj mi koji dio predigre te najviše izluđuje.", "Sisi mi prst 10 sekundi gledajući me u oči.", "Polako mi skini cipele i čarape, pa poljubi gležanj.", "Igraj s povezom na očima, ja ti govorim karte.", "Natjeraj me da ti sama/sam skinem komad odjeće.",
+      "Zgrabi me za bokove i privuci snažno na sebe.", "Daj mi francuski poljubac s puno jezika (1 min).", "Pusti me da ti ostavim mokar trag na vratu.", "Igraj bez grudnjaka/majice ispod hudice.", "Priznaj kada si zadnji put masturbirao/la misleći na mene.",
+      "Polako prelazi rukama preko mog tijela od vrata do koljena.", "Šapni mi boju donjeg rublja koje nosiš.", "Zadirkuj moje usne svojima bez spajanja 1 minutu.", "Skini moj remen i privuci me njime prema sebi.", "Pokaži mi svoju najzavodljiviju pozu na krevetu.",
+      "Poljubi me u vrat točno na pulsu.", "Igraš s nogama prebačenim preko mojih.", "Priznaj mi što nosiš ispod odjeće i koliko te pali.", "Stisni me uza zid i ljubi me 30 sekundi.", "Pokaži mi prstom gdje želiš da te poljubim.",
+      "Neka tvoja ruka zaluta blizu mog međunožja i ostane.", "Poljubi mi vrat i ostavi trag zubima.", "Prebaci se u seksi donje rublje za ostatak večeri.", "Priznaj koju moju sliku potajno čuvaš na mobitelu.", "Poljubi me kao nakon mjesec dana razdvojenosti.",
+      "Otkopčaj prva tri gumba na mojoj košulji/majici.", "Moraš mi maziti unutarnju stranu bedra 1 minutu.", "Priznaj koji ti je moj najdraži dio tijela.", "Daj mi poljubac koji počinje nježno, a završava grubo.", "Dopusti mi da ti skinem jedan komad odjeće zubima.",
+      "Stavi moju ruku ispod svog donjeg rublja na 10 sekundi.", "Zatvori oči dok ti polako prelazim prstima po usnama.", "Iduću partiju moraš držati ruku na mojoj stražnjici.", "Moraš mi reći tri prostote koje te jako pale.", "Zajaši me i napravi tri spora, kružna pokreta bokovima.",
+      "Pusti me da ti otkopčam hlače ispod stola.", "Moraš mi dati poljubac u trbuh točno iznad pupka.", "Poljubi me u uho i polako povuci resicu zubima.", "Dopusti mi da ti ruku stavim u džep hlača i ostavim je tamo.", "Priznaj mi jesi li ikada zamišljao/la nas na javnom mjestu.",
+      "Skini čarape i trljaj svoja stopala o moja ispod stola.", "Moraš mi lizati prst jako polako, jedan po jedan.", "Iduću rundu svaka tvoja bačena karta mora biti popraćena seksi pogledom.", "Stavi mi ruku na vrat (lagano) dok me ljubiš.", "Dopusti mi da ti gurnem ruku ispod majice na leđa.",
+      "Igraj iduću partiju s otkopčanim šlicom.", "Moraš me ljubiti u vrat dok ti ne kažem da staneš.", "Priznaj mi što bi mi radio/la da smo sad u liftu.", "Pusti me da ti pređem jezikom preko usana.", "Dopusti mi da te zavedem plesom od 30 sekundi.",
+      "Moraš mi poljubiti unutarnju stranu zgloba na ruci.", "Reci mi koju moju pozu najviše voliš gledati.", "Iduću partiju moraš odigrati držeći moj remen.", "Daj mi 3 kratka poljupca u rame.", "Pusti me da ti zavučem ruku pod kosu i masiram tjeme.",
+      "Moraš mi reći što te najviše napaljuje kod mog glasa.", "Igraš iduću rundu dok ti ja pušem hladan zrak u vrat.", "Poljubi me u ključnu kost i zadrži usne tamo.", "Priznaj mi koji ti je bio najnapetiji trenutak s početka veze.", "Dopusti mi da te ugrizem (lagano) za usnu.",
+      "Moraš mi otkopčati grudnjak s jednom rukom (ili pokušati).", "Pusti me da ti pređem ledom preko usana.", "Moraš mi šapnuti što bi mi radio/la da ne igramo karte.", "Iduću rundu igraj dok ti je jedna noga prebačena preko mog ramena.", "Dopusti mi da ti skinem cipele i čarape zubima.",
+      "Priznaj mi koji moj pogled te najviše uzbuđuje.", "Moraš me poljubiti svugdje osim po genitalijama iduću minutu.", "Igraj iduću rundu bez hlača/suknje, samo u majici i gaćicama.", "Dopusti mi da ti stavim ruku na unutarnju stranu bedra dok igraš.", "Moraš mi reći koju moju fantaziju bi volio/la ostvariti."
     ],
     hard: [
-      "Moraš skinuti svu odjeću sa sebe osim donjeg rublja.",
-      "Moraš mi pružiti oralno zadovoljstvo na 2 minute prije nove runde.",
-      "Moraš mi napraviti lap dance na pjesmu koju ja odaberem.",
-      "Sljedeću partiju moraš igrati potpuno u donjem rublju.",
-      "Moraš mi ostaviti ljubavni ugriz na bedru.",
-      "Dopusti mi da ti vežem ruke za iduću partiju Unoa.",
-      "Moraš igrati Unoa klečeći ispred mene.",
-      "Moraš mi skinuti donje rublje dok igramo.",
-      "Dok vučeš karte, moraš me dodirivati ispod stola.",
-      "Ja biram što radimo u krevetu večeras."
+      "Moraš skinuti svu odjeću sa sebe osim donjeg rublja.", "Pruži mi oralno zadovoljstvo na 2 minute prije nove runde.", "Napravi mi lap dance na pjesmu koju ja odaberem.", "Sljedeću partiju moraš igrati potpuno u toplesu/bez majice.", "Ostavi mi ljubavni ugriz na bedru.",
+      "Dopusti mi da ti vežem ruke za leđa za iduću partiju.", "Igraj Unoa klečeći ispred mene na podu.", "Skini mi donje rublje dok igramo i ostavi me golog/u ispod stola.", "Dok vučeš karte, dodiruj me direktno po koži ispod stola.", "Ja biram što točno radimo u krevetu večeras.",
+      "Potpuno se skini i igraj golog/u iduće dvije runde.", "Pruži mi brzi oralni seks pod stolom dok ja bacam kartu.", "Dopusti mi da te pljusnem po stražnjici 5 puta jako.", "Lezi na krevet, raširi se i dopusti mi da te izludim rukama.", "Liži mi unutarnju stranu bedra dok ja držim karte.",
+      "Stavi kockicu leda u usta i rastopi je na mojim intimnim dijelovima.", "Šapni mi najprostiju rečenicu koju možeš smisliti.", "Iduću partiju igraj zavezanih očiju i sputanih ruku.", "Primi me za kosu i povuci u duboki, grubi poljubac.", "Zadovoljavaj se pred mnom dok ti brojim do 60.",
+      "Dopusti mi da radim s tobom što god želim iduće 3 minute.", "Skini gaćice i igraj potpuno golog/u raširenih nogu na stolici.", "Liži mi prste jednog po jednog nakon što ih staviš u usta.", "Igraj tako da ti sjedim u krilu i trljam se o tebe do ruba.", "Ostavi mi trag zuba na vratu koji će se vidjeti sutra.",
+      "Dopusti mi da ti stavim štipaljke na osjetljivo mjesto.", "Liži mi pupak i lagano se spuštaj prema dolje dok ne kažem stop.", "Svaka tvoja izgubljena karta = skidanje novog komada donjeg rublja.", "Reci mi najperverzniju tajnu koju godinama skrivaš.", "Zajaši me preko odjeće i simuliraj divlji seks 2 pune minute.",
+      "Liži mi stopala i gležnjeve s maksimalnom posvećenošću.", "Stavi ruku duboko u moje gaćice i ne miči je do kraja runde.", "Priredi mi jednominutni, prljavi striptiz uz stenjanje.", "Iduću partiju igraj prebačen/a preko mog krila licem prema podu.", "Ispuni mi bilo koju seksi želju, odmah sada na licu mjesta.",
+      "Dopusti mi da ti pljunem u usta dok se strastveno ljubimo.", "Sisi mi bradavice preko odjeće dok ja igram svoju rundu.", "Lezi na pod da te mogu gaziti i maziti istovremeno nogama.", "Pruži mi oralni seks do ruba orgazma, a onda naglo stani.", "Skini sve sa sebe i veži se za krevet – igra Unoa pauzira.",
+      "Pusti me da ti nanesem blagu bol kapanjem voska na bedra.", "Jaši me okrenut/a leđima iduće 3 minute.", "Gledaj me u oči dok oboje guramo ruke u svoje hlače.", "Trljaj mi lice svojim međunožjem 1 minutu.", "Igraj potpuno vezan/a, ja ti pokazujem tvoje karte.",
+      "Skini moje gaćice zubima, bez upotrebe ruku.", "Liži mi trbuh sve dok ne počnem drhtati.", "Iduću partiju odigraj držeći moj spolni organ u ruci.", "Kleči preda mnom i moli me da ti dopustim da svršiš.", "Skini se potpuno, a ja ostajem odjeven/a.",
+      "Igraj u pozi psa dok ja bacam karte s tvojih leđa.", "Dopusti mi da ti gurnem ruku duboko u donje rublje pred kraj partije.", "Polizi moj vrat od ključne kosti do uha.", "Priznaj mi točno koliko prstiju želiš u sebi večeras.", "Zadirkuj moje intimne dijelove perom ili ledom.",
+      "Zaveži mi ruke i iskoristi moje tijelo na 2 minute.", "Gurni ruku u moje hlače i igraj se sa mnom dok miješaš karte.", "Pruži mi intenzivnu masažu stražnjice s uljem.", "Dopusti mi da ti stavim igračku (plug/vibrator) tijekom igre.", "Pljusni mi stražnjicu svaki put kad izvučeš kartu.",
+      "Natjeraj me da kleknem i radim ti što god poželiš.", "Izaberi: oralni seks odmah ili skini svu odjeću.", "Pokaži mi najosjetljiviju točku i dopusti da je izludim.", "Trljaj se o mene potpuno gola/gol dok ne budemo ludi.", "Ugrizni me čvrsto za unutarnju stranu bedra.",
+      "Zadovoljavaj me dok ne kažem tvoje ime na glas.", "Igraj s vibratorom uključenim na najjače.", "Priznaj koju moju prljavu naviku u krevetu obožavaš.", "Legni ispod stola i radi mi što god želiš dok partija traje.", "Dopusti mi da kontroliram tvoj orgazam večeras.",
+      "Od sada svaka +4 karta znači 1 minutu oralnog seksa.", "Stisni moje tijelo uz svoje toliko jako da osjetim mišiće.", "Izgovori najprljaviju stvar koju želiš da ti radim dok spavaš.", "Skini me i iskoristi moje tijelo kao stol za karte.", "Poljubi mi svaki centimetar trbuha do ruba rublja.",
+      "Dopusti mi da ti kapnem vrući vosak na trbuh.", "Moraš me usmeno zadovoljavati dok ne zatvorim oči od užitka.", "Igraj iduću rundu s mojim prstima u tvojim ustima.", "Skini moj donji veš i stavi ga sebi oko vrata do kraja igre.", "Dopusti mi da ti ostavim crvene tragove od prstiju na bedrima.",
+      "Priznaj mi na koji način bi volio/la da budem grublji/a prema tebi.", "Moraš mi lizati bradavice dok se ne naježim.", "Zaveži me za stolicu i provociraj me poljupcima 2 minute.", "Moraš igrati Unoa dok ti ja masiram međunožje (ispod odjeće).", "Dopusti mi da ti navučem majicu preko glave i zavežem ruke u nju.",
+      "Moraš mi dopustiti da te diram s ledom tamo gdje si najosjetljiviji/a.", "Kleči ispred mene s otvorenim ustima i čekaj moje upute.", "Priznaj mi koju bi moju odjeću volio/la poderati sa mene.", "Moraš se zadovoljavati pred mnom dok ja snimam (samo za nas).", "Dopusti mi da ti grizem rame dok ne kažeš stop.",
+      "Igraj iduću partiju dok ja sjedim na tvom licu (u donjem rublju).", "Moraš mi pružiti oralni seks točno minutu, zatim stati na 5 minuta.", "Priznaj mi jesi li ikada razmišljao/la o analnom seksu sa mnom.", "Moraš mi lizati prste nakon što ih umočim u tvoje međunožje.", "Dopusti mi da ti odredim točno kada smiješ svršiti večeras."
     ],
     extreme: [
       "Moraš se potpuno skinuti za sljedeću partiju.",
@@ -547,18 +591,139 @@ const db = {
     ]
   },
   dice: {
-    soft: { actions: ["Poljubi", "Nježno masiraj", "Pomiluj", "Puhni u", "Nasloni glavu na"], parts: ["moj vrat", "moj obraz", "moju ruku", "moju kosu", "moje rame"] },
-    hot: { actions: ["Liži", "Lagano grickaj", "Strastveno poljubi", "Skini odjeću sa", "Čvrsto stisni"], parts: ["moje usne", "moj trbuh", "moj donji dio leđa", "moje bedro", "moja prsa"] },
-    hard: { actions: ["Ugrizni", "Siši", "Ostavi trag (šljivu) na", "Pljesni", "Poliži usnama"], parts: ["moje unutarnje bedro", "moju stražnjicu", "moje međunožje", "moju ključnu kost", "moj vrat"] },
-    extreme: { actions: ["Pruži oralno na", "Kapaj vrući vosak na", "Zadovolji", "Stavi led na", "Trljaj ulje o"], parts: ["moju najosjetljiviju zonu", "moju stražnjicu", "moje međunožje", "moje bradavice", "moj donji dio trbuha"] }
+    soft: {
+      actions: [
+        "Poljubi", "Nježno masiraj", "Pomiluj", "Puhni u", "Nasloni glavu na",
+        "Pomiriši", "Dodirni nosom", "Polagano gladi", "Ostavi nježan poljubac na",
+        "Prisloni usne na", "Mazi prstima", "Kruži prstima po", "Toplo dahni na",
+        "Snažno zagrli", "Nježno stisni", "Poljubi tri puta zaredom", "Prisloni obraz na",
+        "Prelazi usnama preko", "Sklopi oči i poljubi", "Pogladi kosom"
+      ],
+      parts: [
+        "moj vrat", "moj obraz", "moju ruku", "moju kosu", "moje rame",
+        "moj dlan", "moje čelo", "moj vrh nosa", "moje zapešće", "moje prste",
+        "moj lakat", "moju podlakticu", "moja leđa", "moju ključnu kost", "moj potiljak"
+      ]
+    },
+    hot: {
+      actions: [
+        "Liži", "Lagano grickaj", "Strastveno poljubi", "Skini odjeću sa", "Čvrsto stisni",
+        "Prelazi jezikom preko", "Ostavi mokri poljubac na", "Trljaj nos o", "Zadiraj prstima u",
+        "Polako otkopčaj", "Grickaj i povlači", "Zadrži usne 10 sekundi na", "Polako ljubi",
+        "Skini rukama", "Gledaj me u oči i diraj", "Šapni prostotu dok diraš", "Klizi rukama niz",
+        "Zadirkuj usnama", "Prelazi noktima preko", "Snažno udahni miris na"
+      ],
+      parts: [
+        "moje usne", "moj trbuh", "moj donji dio leđa", "moje bedro", "moja prsa",
+        "moje grudi", "moj bok", "moj ušni režanj", "moju stražnjicu", "moju potkoljenicu",
+        "moju kožu ispod majice", "moje golo rame", "moj donji trbuh", "moju unutarnju stranu ruke", "moj goli struk"
+      ]
+    },
+    hard: {
+      actions: [
+        "Ugrizni", "Siši", "Ostavi trag (šljivu) na", "Pljesni", "Poliži usnama",
+        "Čvrsto uhvati", "Zagrizi pa poliži", "Grebi noktima po", "Povuci", "Trljaj svoje tijelo o",
+        "Kapni malo pića na i poliži", "Stisni s obje ruke", "Masiraj grubo", "Gurni ruku na",
+        "Pritisni usne snažno na", "Ostavi crveni trag na", "Uštipni", "Udari lagano",
+        "Prisloni kockicu leda na", "Trljaj kroz donje rublje"
+      ],
+      parts: [
+        "moje unutarnje bedro", "moju stražnjicu", "moje međunožje", "moju ključnu kost", "moj vrat",
+        "moju bradavicu", "moje donje rublje", "moj goli trbuh", "moj donji dio leđa", "moju gornju usnu",
+        "moju kožu", "moje bokove", "moje prepone", "moju osjetljivu zonu", "moje golo bedro"
+      ]
+    },
+    extreme: {
+      actions: [
+        "Pruži oralno na", "Kapaj vrući vosak na", "Zadovolji", "Stavi led na", "Trljaj ulje o",
+        "Veži uže oko", "Gurni prste u", "Liži agresivno", "Udari kožnim remenom po", "Grebi do crvenila po",
+        "Pljesni jako po", "Siši dok ne zaboli", "Nanesi bol na", "Prisloni igračku (vibrator) na",
+        "Zadirkuj jezikom", "Tretiraj grubo", "Ugrizi do jakog traga na", "Ostavi modricu od ugriza na",
+        "Polij alkoholom/pićem i poliži", "Sjedni licem na"
+      ],
+      parts: [
+        "moju najosjetljiviju zonu", "moju stražnjicu", "moje intimne dijelove", "moje bradavice",
+        "moj donji dio trbuha", "moj analni otvor", "moju g-točku / slabu točku", "moje unutarnje prepone",
+        "moje vezane ruke", "moje gole grudi", "moju kožu ispod rublja", "moj vratni mišić",
+        "moju donju usnu", "moje međunožje", "moj goli trbuh"
+      ]
+    }
   }
 };
 
 const guessWords = {
-  filmovi: ["Titanic", "Pedeset nijansi sive", "Gospodar prstenova", "Harry Potter", "Sam u kući", "Zgodna žena", "Američka pita", "Sumrak", "Brzi i žestoki", "Bilježnica", "Kum", "Matrix", "Joker", "Avatar", "Deadpool"],
-  stvari: ["Lisice", "Krevet", "Mobitel", "Kondom", "Svijeća", "Bič", "Vibrator", "Donje rublje", "Posteljina", "Jastuk", "Ogledalo", "Kamera", "Štikle", "Ruž", "Vino"],
-  radnje: ["Ljubljenje", "Vođenje ljubavi", "Tuširanje", "Kuhanje doručka", "Masaža", "Skidanje", "Spavanje", "Maženje", "Svađanje", "Plesanje", "Vezivanje", "Gledanje filma", "Plakanje", "Smijanje", "Trčanje"],
-  dijeloviTijela: ["Vrat", "Usne", "Stražnjica", "Bedro", "Grudi", "Trbuh", "Kosa", "Leđa", "Uho", "Ruke", "Stopala", "Jezik", "Prsti", "Koljeno", "Struk"]
+  "Filmovi i Serije": [
+    "Titanic", "Harry Potter", "Gospodar prstenova", "Sam u kući", "Prijatelji", "Teorija velikog praska", "Igra prijestolja", "Breaking Bad", "Kum", "Matrix",
+    "Avatar", "Deadpool", "Spiderman", "Batman", "Joker", "Forrest Gump", "Gladijator", "Zgodna žena", "Prljavi ples", "Bilježnica",
+    "Sumrak", "Shrek", "Kralj lavova", "Mad Max", "Transformersi", "Brzi i žestoki", "Mamurluk", "Američka pita", "Terminator", "Rocky",
+    "Rambo", "Umri muški", "Indiana Jones", "Jurski park", "Povratak u budućnost", "E.T.", "Ralje", "Isijavanje", "Psiho", "Casablanca",
+    "Zameo ih vjetar", "Vrisak", "Noć vještica", "Petak 13.", "Slagalica strave", "Alien", "Predator", "Zvjezdane staze", "Zvjezdani ratovi", "Osvetnici",
+    "Iron Man", "Kapetan Amerika", "Thor", "Crna udovica", "Čuvari galaksije", "Doktor Strange", "Ant-Man", "X-Men", "Wolverine", "Logan",
+    "Simpsonovi", "South Park", "Family Guy", "Rick i Morty", "Futurama", "Spužva Bob", "Tom i Jerry", "Zekoslav Mrkva", "Scooby Doo", "Dexter",
+    "Združena braća", "Obitelj Soprano", "Žica", "Momci s Madisona", "Peaky Blinders", "Stranger Things", "La Casa de Papel", "Squid Game", "Kruna", "Crno ogledalo",
+    "Damin gambit", "Narcos", "Ozark", "Uvod u anatomiju", "Dr. House", "Hitna služba", "Puna kuća", "Princ iz Bel Aira", "Seinfeld", "U uredu",
+    "Parks and Recreation", "Moderna obitelj", "Kako sam upoznao vašu majku", "Dva i pol muškarca", "Zlatne djevojke", "Seks i grad", "Tračerica", "Vampirski dnevnici", "Lovci na natprirodno", "Dosjei X"
+  ],
+  "Hrana i Piće": [
+    "Pizza", "Ćevapi", "Burek", "Sarma", "Grah", "Gulaš", "Pršut", "Sir", "Masline", "Kruh",
+    "Tjestenina", "Rižoto", "Špageti", "Njoki", "Lazanje", "Palačinke", "Sladoled", "Čokolada", "Torta", "Keksi",
+    "Krafna", "Pita", "Štrudla", "Jabuka", "Banana", "Naranča", "Limun", "Jagoda", "Malina", "Borovnica",
+    "Lubenica", "Dinja", "Grožđe", "Breskva", "Šljiva", "Kruška", "Ananas", "Kivi", "Mango", "Avokado",
+    "Rajčica", "Krastavac", "Paprika", "Luk", "Češnjak", "Krumpir", "Mrkva", "Kupus", "Salata", "Brokula",
+    "Cvjetača", "Grašak", "Kukuruz", "Gljive", "Špinat", "Blitva", "Meso", "Piletina", "Svinjetina", "Govedina",
+    "Teletina", "Janjetina", "Riba", "Lignje", "Rakovi", "Školjke", "Jaja", "Mlijeko", "Jogurt", "Maslac",
+    "Ulje", "Sol", "Papar", "Šećer", "Med", "Marmelada", "Kava", "Čaj", "Voda", "Sok",
+    "Pivo", "Vino", "Rakija", "Liker", "Viski", "Votka", "Džin", "Rum", "Koktel", "Šampanjac",
+    "Cedevita", "Coca-Cola", "Fanta", "Sprite", "Red Bull", "Sendvič", "Hamburger", "Hot dog", "Pomfrit", "Čips"
+  ],
+  "Životinje": [
+    "Pas", "Mačka", "Miš", "Štakor", "Hrčak", "Zec", "Konj", "Krava", "Svinja", "Ovca",
+    "Koza", "Kokoš", "Pijetao", "Patka", "Guska", "Purica", "Ptica", "Papiga", "Golub", "Vrabac",
+    "Sova", "Orao", "Sokol", "Galeb", "Roda", "Labud", "Pingvin", "Noj", "Riba", "Morski pas",
+    "Kit", "Delfin", "Hobotnica", "Meduza", "Zvijezda", "Rak", "Kornjača", "Zmija", "Gušter", "Krokodil",
+    "Aligator", "Žaba", "Pauk", "Škorpion", "Mrav", "Pčela", "Osa", "Muha", "Komarac", "Leptir",
+    "Skakavac", "Bubamara", "Crv", "Puž", "Lav", "Tigar", "Leopard", "Gepard", "Pantera", "Slon",
+    "Nosorog", "Vodenkonj", "Žirafa", "Zebra", "Majmun", "Gorila", "Čimpanza", "Medvjed", "Vuk", "Lisica",
+    "Jelen", "Srna", "Divlja svinja", "Vjeverica", "Rakun", "Tvor", "Dabar", "Krtica", "Šišmiš", "Klokan",
+    "Koala", "Panda", "Ljenjivac", "Deva", "Ljama", "Alpaka", "Bizon", "Jastreb", "Pelikan", "Flamingo",
+    "Tukan", "Kolibrić", "Som", "Šaran", "Pastrva", "Štuka", "Tuna", "Losos", "Bakalar", "Iguana"
+  ],
+  "Seksi pojmovi": [
+    "Poljubac", "Usne", "Vrat", "Zagrljaj", "Strast", "Ljubav", "Seks", "Masaža", "Dodir", "Orgazam",
+    "Uzbuđenje", "Želja", "Maženje", "Krevet", "Posteljina", "Jastuk", "Donje rublje", "Grudnjak", "Gaćice", "Čipka",
+    "Podvezice", "Najlonke", "Štikle", "Parfem", "Svijeća", "Romantika", "Vino", "Šampanjac", "Večera", "Spoj",
+    "Pogled", "Osmijeh", "Flert", "Zavođenje", "Predigra", "Penetracija", "Vrhunac", "Stenjanje", "Uzdah", "Šaputanje",
+    "Ugriz", "Šljiva", "Grebanje", "Nokti", "Koža", "Znoj", "Tijelo", "Oblina", "Grudi", "Stražnjica",
+    "Bedra", "Međunožje", "Jezik", "Pljuvačka", "Oralno", "Ručno", "Igračke", "Vibrator", "Bič", "Lisice",
+    "Uže", "Vezivanje", "Dominacija", "Submisivnost", "Gospodar", "Robinja", "Kazna", "Nagrada", "Povez", "Led",
+    "Vosak", "Ulje", "Lubrikant", "Kama Sutra", "Poza", "Doggy", "Misionarska", "Kaubojka", "Žlica", "Tuš",
+    "Kada", "Ogledalo", "Kamera", "Snimka", "Slike", "Poruke", "Poziv", "Golo", "Skidanje", "Gumbi",
+    "Patent", "Zatvarač", "Striptiz", "Lap dance", "Ples", "Ritam", "Bokovi", "Trbuh", "Leđa", "Kosa"
+  ],
+  "Poznate Osobe": [
+    "Brad Pitt", "Angelina Jolie", "Leonardo DiCaprio", "Johnny Depp", "Tom Cruise", "Keanu Reeves", "Will Smith", "Denzel Washington", "Morgan Freeman", "Robert De Niro",
+    "Al Pacino", "Marlon Brando", "Clint Eastwood", "Harrison Ford", "Tom Hanks", "Meryl Streep", "Julia Roberts", "Sandra Bullock", "Nicole Kidman", "Charlize Theron",
+    "Scarlett Johansson", "Jennifer Lawrence", "Emma Stone", "Natalie Portman", "Anne Hathaway", "Marilyn Monroe", "Audrey Hepburn", "Elvis Presley", "Michael Jackson", "Madonna",
+    "Lady Gaga", "Beyonce", "Rihanna", "Taylor Swift", "Katy Perry", "Ariana Grande", "Justin Bieber", "Ed Sheeran", "Eminem", "Snoop Dogg",
+    "Tupac", "Biggie", "Jay-Z", "Kanye West", "Drake", "Cristiano Ronaldo", "Lionel Messi", "Luka Modrić", "LeBron James", "Michael Jordan",
+    "Kobe Bryant", "Novak Đoković", "Roger Federer", "Rafael Nadal", "Serena Williams", "Muhammad Ali", "Mike Tyson", "Usain Bolt", "Albert Einstein", "Nikola Tesla",
+    "Isaac Newton", "Galileo Galilei", "Charles Darwin", "Stephen Hawking", "Steve Jobs", "Bill Gates", "Elon Musk", "Mark Zuckerberg", "Jeff Bezos", "Barack Obama",
+    "Donald Trump", "Joe Biden", "Vladimir Putin", "Winston Churchill", "Nelson Mandela", "Martin Luther King", "Mahatma Gandhi", "Majka Terezija", "Princeza Diana", "Kraljica Elizabeta",
+    "Papa Franjo", "Dalai Lama", "William Shakespeare", "Pablo Picasso", "Leonardo da Vinci", "Vincent van Gogh", "Mozart", "Beethoven", "Bach", "Severina",
+    "Gibonni", "Oliver Dragojević", "Mišo Kovač", "Dino Dvornik", "Tony Cetinski", "Petar Grašo", "Danijela Martinović", "Nina Badrić", "Jelena Rozga", "Maja Šuput"
+  ],
+  "Sport i Hobiji": [
+    "Nogomet", "Košarka", "Rukomet", "Odbojka", "Tenis", "Stolni tenis", "Badminton", "Skijanje", "Klizanje", "Hokej",
+    "Vaterpolo", "Plivanje", "Ronjenje", "Veslanje", "Jedrenje", "Surfanje", "Trčanje", "Maraton", "Sprint", "Skok u dalj",
+    "Skok u vis", "Bacanje kugle", "Bacanje koplja", "Gimnastika", "Ritmička gimnastika", "Aerobik", "Zumba", "Joga", "Pilates", "Fitness",
+    "Bodybuilding", "Dizanje utega", "Boks", "Kickboks", "Karate", "Judo", "Taekwondo", "Hrvanje", "MMA", "Mačevanje",
+    "Streljaštvo", "Luk i strijela", "Biciklizam", "Motociklizam", "Formula 1", "Reli", "Karting", "Jahanje", "Polo", "Golf",
+    "Biljar", "Kuglanje", "Boćanje", "Pikado", "Šah", "Poker", "Planinarenje", "Alpinizam", "Penjanje", "Kampiranje",
+    "Ribolov", "Lov", "Fotografija", "Slikanje", "Crtanje", "Kiparstvo", "Pletenje", "Šivanje", "Kuhanje", "Pečenje",
+    "Vrtlarstvo", "Čitanje", "Pisanje", "Blogiranje", "Vlogging", "Gaming", "Programiranje", "Elektronika", "Robotika", "Maketarstvo",
+    "Skupljanje markica", "Numizmatika", "Astronomija", "Promatranje ptica", "Gledanje filmova", "Slušanje glazbe", "Sviranje gitare", "Sviranje klavira", "Pjevanje", "Ples",
+    "Balet", "Breakdance", "Hip hop", "Skupljanje antikviteta", "Zbor", "Volontiranje", "Planiranje putovanja", "Kaligrafija", "Origami", "Burza"
+  ]
 };
 
 /* --- NOVE LOGIKE ZA RANDOM (BLOKADA PONAVLJANJA) --- */
@@ -696,37 +861,67 @@ export default function App() {
   };
 
   const GuessGame = () => {
-    const [activeCategory, setActiveCategory] = useState(null);
+    const [selectedCats, setSelectedCats] = useState([]);
+    const [activeWords, setActiveWords] = useState(null);
     const [word, setWord] = useState("");
     const [instruction, setInstruction] = useState("");
 
-    if (!activeCategory) {
+    const toggleCat = (cat) => {
+      setSelectedCats(prev => prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]);
+    };
+
+    const startGame = () => {
+      if (selectedCats.length === 0) return;
+      let pool = [];
+      selectedCats.forEach(cat => { pool = [...pool, ...guessWords[cat]]; });
+      setActiveWords(pool);
+      const { active, other } = getBothPlayers();
+      setInstruction(`${active} drži mobitel, a ${other} objašnjava!`);
+      setWord("Spremni? Dodirni za početak!");
+    };
+
+    const nextWord = (e) => {
+      e.stopPropagation();
+      if (activeWords.length === 0) {
+        setWord("🔥 KRAJ! Pogođene su sve riječi! 🔥");
+        return;
+      }
+      const index = Math.floor(Math.random() * activeWords.length);
+      const picked = activeWords[index];
+      const newPool = [...activeWords];
+      newPool.splice(index, 1); // Briše riječ da se ne ponovi
+      setActiveWords(newPool);
+      setWord(picked);
+    };
+
+    if (!activeWords) {
       return (
         <div className="app-container">
           <h2 className="subtitle" style={{ color: '#10b981' }}>Pogodi Riječ</h2>
-          <p style={{ color: '#9ca3af', marginBottom: '30px' }}>Jedan drži mobitel na čelu, drugi objašnjava!</p>
-          <div className="grid-menu">
+          <p style={{ color: '#9ca3af', marginBottom: '20px' }}>Odaberi jednu ili više kategorija za miješanje!</p>
+          <div className="grid-menu" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px' }}>
             {Object.keys(guessWords).map((cat) => (
-              <button key={cat} onClick={() => { 
-                setActiveCategory(cat); 
-                const { active, other } = getBothPlayers();
-                setInstruction(`${active} drži mobitel, a ${other} objašnjava!`);
-                setWord("Spremni? Dodirni za početak!"); 
-              }} className="card neon-emerald">
-                <span className="card-title" style={{ color: '#10b981', textTransform: 'uppercase' }}>{cat}</span>
+              <button key={cat} onClick={() => toggleCat(cat)}
+                className={`card ${selectedCats.includes(cat) ? 'neon-emerald' : ''}`}
+                style={{ padding: '15px', borderColor: selectedCats.includes(cat) ? '#10b981' : 'rgba(255,255,255,0.2)', backgroundColor: selectedCats.includes(cat) ? 'rgba(16, 185, 129, 0.2)' : 'rgba(0,0,0,0.3)' }}>
+                <span className="card-title" style={{ color: selectedCats.includes(cat) ? '#10b981' : 'white', fontSize: '1rem', marginTop: 0 }}>{cat}</span>
               </button>
             ))}
           </div>
+          {selectedCats.length > 0 && (
+            <button onClick={startGame} className="btn-main bg-guess" style={{ marginTop: '30px' }}>ZAPOČNI IGRU</button>
+          )}
           <button onClick={() => setActiveGame(null)} className="back-btn"><ArrowLeft size={20} /> Natrag</button>
         </div>
       );
     }
+
     return (
-      <div className="word-guess-screen" onClick={() => setWord(popRand(guessWords[activeCategory]))}>
-        <p style={{ color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', marginBottom: '10px' }}>Kategorija: {activeCategory}</p>
+      <div className="word-guess-screen" onClick={nextWord}>
+        <p style={{ color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', marginBottom: '10px' }}>Preostalo riječi: {activeWords.length}</p>
         <p style={{ color: '#10b981', fontWeight: 'bold', marginBottom: '30px', textAlign: 'center' }}>{instruction}</p>
         <h1 className="word-text">{word}</h1>
-        <button onClick={(e) => { e.stopPropagation(); setActiveCategory(null); }} className="back-btn" style={{ position: 'absolute', bottom: '40px', background: 'rgba(0,0,0,0.5)', padding: '10px 20px', borderRadius: '30px' }}><ArrowLeft size={20}/> Promijeni kategoriju</button>
+        <button onClick={(e) => { e.stopPropagation(); setActiveWords(null); setSelectedCats([]); }} className="back-btn" style={{ position: 'absolute', bottom: '40px', background: 'rgba(0,0,0,0.5)', padding: '10px 20px', borderRadius: '30px' }}><ArrowLeft size={20}/> Promijeni kategorije</button>
       </div>
     );
   };
