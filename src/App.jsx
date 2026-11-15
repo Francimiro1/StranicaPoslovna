@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Flame, Zap, Eye, Dice5, Layers, ArrowLeft } from 'lucide-react';
+import { Heart, Flame, Zap, Eye, Dice5, Layers, ArrowLeft, Timer, Users } from 'lucide-react';
 
 const LEVELS = {
   soft: { id: 'soft', name: 'Soft', desc: 'Lagani izazovi za zagrijavanje.', style: 'neon-pink' },
@@ -1060,6 +1060,215 @@ const db = {
         "moju donju usnu", "moje međunožje", "moj goli trbuh"
       ]
     }
+  },
+  mostLikely: {
+    soft: [
+      "Tko će prije zaspati usred filma koji je sam/a odabrao/la?",
+      "Tko će prije potrošiti cijelu plaću na potpune gluposti?",
+      "Tko će prije zaplakati na tužnu reklamu ili crtić?",
+      "Tko će prije zaboraviti gdje je parkirao/la auto?",
+      "Tko će prije kasniti na vlastito vjenčanje?",
+      "Tko će prije pojesti tuđi dio deserta iz hladnjaka?",
+      "Tko će prije preživjeti zombi apokalipsu?",
+      "Tko će prije slučajno poslati poruku krivoj osobi?",
+      "Tko će prije udomiti pet pasa s ulice?",
+      "Tko će prije provesti tri sata birajući što gledati na Netflixu?",
+      "Tko će prije se izgubiti u vlastitom gradu bez navigacije?",
+      "Tko će prije naručiti dostavu jer mu/joj se ne da kuhati?",
+      "Tko će prije se rasplakati od smijeha u potpuno ozbiljnoj situaciji?",
+      "Tko će prije provjeravati jesu li vrata zaključana pet puta zaredom?",
+      "Tko će prije pokvariti iznenađenje jer ne zna čuvati tajnu?",
+      "Tko će prije stati nasred ulice da pomazi nepoznatu mačku?",
+      "Tko će prije pasti na najgluplju internetsku prevaru?",
+      "Tko će prije početi pjevati pod tušem iz sveg glasa?",
+      "Tko će prije ostaviti prljavo suđe 'da se namače' tri dana?",
+      "Tko će prije se posvađati s navigacijom u autu?",
+      "Tko će prije zaspati u javnom prijevozu i promašiti stanicu?",
+      "Tko će prije kupiti nešto samo zato što je na sniženju?",
+      "Tko će prije zaboraviti nečiji rođendan unatoč podsjetniku?",
+      "Tko će prije prepričavati isti vic deset puta zaredom?",
+      "Tko će prije zapaliti kuhinju pokušavajući skuhati jaje?"
+    ],
+    hot: [
+      "Tko će prije završiti u zatvoru zbog neke glupe oklade?",
+      "Tko će prije se osramotiti pred simpatijom ili poznatom osobom?",
+      "Tko će prije se napiti od samo dva pića na tulumu?",
+      "Tko će prije ući u raspravu s konobarom ili taksistom?",
+      "Tko će prije ispričati sramotnu tajnu iz djetinjstva kad popije?",
+      "Tko će prije slomiti mobitel u prvih tjedan dana od kupnje?",
+      "Tko će prije se poskliznuti i pasti pred punim kafićem?",
+      "Tko će prije odustati od dijete već prvog dana navečer?",
+      "Tko će prije napraviti impulzivnu tetovažu na putovanju?",
+      "Tko će prije se zaplakati dok gleda reality show?",
+      "Tko će prije probati najljuću papričicu na svijetu iz čistog inata?",
+      "Tko će prije se posvađati oko pravila društvene igre?",
+      "Tko će prije izgubiti novčanik ili ključeve na izlasku?",
+      "Tko će prije zaplesati na stolu kad krene omiljena pjesma?",
+      "Tko će prije se javiti na nepoznati broj i pričati 20 minuta?",
+      "Tko će prije potrošiti sat vremena spremajući se za odlazak u dućan?",
+      "Tko će prije zaspati na tulumu u kutu kauča?",
+      "Tko će prije prekršiti obećanje da 'večeras idemo rano spavati'?",
+      "Tko će prije se izvući iz kazne za brzu vožnju na šarm?",
+      "Tko će prije pojesti cijelu pizzu sam/a u tri ujutro?",
+      "Tko će prije se uvrijediti na potpuno bezazlenu šalu?",
+      "Tko će prije potrošiti zadnje novce na putovanje u zadnji čas?",
+      "Tko će prije se izgubiti u IKEA-i i tražiti izlaz sat vremena?",
+      "Tko će prije početi plakati od sreće kad vidi dobru hranu?",
+      "Tko će prije preživjeti na pustom otoku samo uz pomoć sarkazma?"
+    ],
+    hard: [
+      "Tko će prije inicirati seks na potpuno neprikladnom mjestu?",
+      "Tko će prije poslati eksplicitnu sliku u krivi chat?",
+      "Tko će prije predložiti korištenje lisica ili poveza u krevetu?",
+      "Tko će prije izgubiti kontrolu i rastrgati odjeću s partnera?",
+      "Tko će prije predložiti snimanje kućnog videa?",
+      "Tko će prije doživjeti orgazam u manje od dvije minute?",
+      "Tko će prije predložiti igranje uloga (roleplay) večeras?",
+      "Tko će prije ostaviti vidljivu šljivu na vratu iz čiste strasti?",
+      "Tko će prije otići na spoj bez donjeg rublja ispod odjeće?",
+      "Tko će prije probuditi partnera oralnim seksom usred noći?",
+      "Tko će prije vrištati toliko glasno da susjedi čuju?",
+      "Tko će prije kupiti najskuplju igračku u sex shopu?",
+      "Tko će prije predložiti seks pod tušem iako je kabina premala?",
+      "Tko će prije preuzeti potpunu dominaciju u spavaćoj sobi?",
+      "Tko će prije slomiti krevet tijekom divljeg odnosa?",
+      "Tko će prije priznati svoju najmračniju seksualnu fantaziju?",
+      "Tko će prije tražiti još jednu rundu odmah nakon vrhunca?",
+      "Tko će prije se napaliti samo od jednog pogleda preko stola?",
+      "Tko će prije predložiti seks na stražnjem sjedalu auta?",
+      "Tko će prije isprobati novu pozu iz Kama Sutre bez zagrijavanja?"
+    ],
+    extreme: [
+      "Tko će prije predložiti trojac bez imalo oklijevanja?",
+      "Tko će prije pristati na seks na javnom mjestu usred bijela dana?",
+      "Tko će prije poželjeti biti vezan/a i potpuno bespomoćan/na sat vremena?",
+      "Tko će prije posjetiti podzemni BDSM ili svingerski klub?",
+      "Tko će prije uživati u boli i udarcima remenom tijekom seksa?",
+      "Tko će prije pristati na potpunu seksualnu pokornost cijeli vikend?",
+      "Tko će prije isprobati igru s vrućim voskom i ledom na genitalijama?",
+      "Tko će prije nositi daljinski upravljani vibrator na obiteljskom ručku?",
+      "Tko će prije predložiti snimanje i gledanje vlastitog pornića?",
+      "Tko će prije isprobati ekstremni analni seks bez dugog nagovaranja?",
+      "Tko će prije pristati na ulogu seksualnog roba na 24 sata?",
+      "Tko će prije inicirati seks u moru ili bazenu pred drugima?",
+      "Tko će prije tražiti gušenje (choking) tijekom vrhunca?",
+      "Tko će prije se napaliti na ideju da ih netko promatra kroz prozor?",
+      "Tko će prije prekršiti sve tabue u krevetu u jednoj noći?"
+    ]
+  },
+  fiveSeconds: {
+    soft: [
+      "Nabroji 3 stvari koje najviše voliš kod mene!",
+      "Nabroji 3 mjesta kamo želiš da otputujemo zajedno!",
+      "Nabroji 3 jela koja najbolje pripremam!",
+      "Nabroji 3 nadimka kojima me zoveš ili bi me zvao/la!",
+      "Nabroji 3 filma koja moramo pogledati zajedno!",
+      "Nabroji 3 moje navike koje su ti preslatke!",
+      "Nabroji 3 stvari koje te uvijek nasmiju kod mene!",
+      "Nabroji 3 poklona koja bi me oduševila!",
+      "Nabroji 3 pjesme koje te podsjećaju na nas!",
+      "Nabroji 3 stvari koje bismo radili da dobijemo na lotu!",
+      "Nabroji 3 razloga zašto smo savršen par!",
+      "Nabroji 3 stvari bez kojih ne možeš zamisliti jutro!",
+      "Nabroji 3 životinje koje bi udomio/la da imamo veliku kuću!",
+      "Nabroji 3 spoja na koja me želiš odvesti!",
+      "Nabroji 3 stvari koje voliš raditi nedjeljom sa mnom!"
+    ],
+    hot: [
+      "Nabroji 3 dijela mog tijela koji te najviše pale!",
+      "Nabroji 3 mjesta u kući gdje želiš da vodimo ljubav!",
+      "Nabroji 3 komada odjeće u kojima izgledam najseksi!",
+      "Nabroji 3 stvari koje voliš tijekom predigre!",
+      "Nabroji 3 prljave riječi koje voliš čuti u krevetu!",
+      "Nabroji 3 javna mjesta gdje bi me volio/la strastveno poljubiti!",
+      "Nabroji 3 stvari koje želiš da ti napravim večeras!",
+      "Nabroji 3 poze u kojima najviše uživaš!",
+      "Nabroji 3 načina kako te najbrže mogu uzbuditi!",
+      "Nabroji 3 erogene zone na svom tijelu!",
+      "Nabroji 3 stvari koje voliš kada ti radim usnama!",
+      "Nabroji 3 situacije kad si bio/la nenormalno napaljen/a na mene!",
+      "Nabroji 3 seksi igračke ili rekvizita koje bi isprobao/la!",
+      "Nabroji 3 stvari koje te odmah ohlade u krevetu!",
+      "Nabroji 3 fantazije koje imaš o meni!"
+    ],
+    hard: [
+      "Nabroji 3 fetiša koja bi volio/la isprobati sa mnom!",
+      "Nabroji 3 stvari koje želiš da ti radim dok si vezan/a!",
+      "Nabroji 3 uloge (roleplay) koje bi volio/la da odigramo!",
+      "Nabroji 3 mjesta izvan kuće gdje želiš divlji seks!",
+      "Nabroji 3 načina kako želiš da dominiram nad tobom!",
+      "Nabroji 3 stvari koje želiš da ti šapćem dok svršavaš!",
+      "Nabroji 3 predmeta iz ove sobe koje možemo iskoristiti u seksu!",
+      "Nabroji 3 najluđe poze koje želiš isprobati!",
+      "Nabroji 3 stvari koje ti nitko prije mene nije radio u krevetu!",
+      "Nabroji 3 razloga zašto obožavaš grubi seks!",
+      "Nabroji 3 mjesta na mom tijelu gdje želiš ostaviti trag!",
+      "Nabroji 3 stvari koje bi napravio/la da sam potpuno bespomoćan/na!"
+    ],
+    extreme: [
+      "Nabroji 3 najperverznije fantazije koje skrivaš u glavi!",
+      "Nabroji 3 javna mjesta gdje bismo riskirali uhićenje zbog seksa!",
+      "Nabroji 3 BDSM radnje koje odmah želiš isprobati!",
+      "Nabroji 3 osobe s kojima bi zamislio/la trojac!",
+      "Nabroji 3 ekstremne kazne za onoga tko izgubi večeras!",
+      "Nabroji 3 tabua u seksu koja želiš srušiti sa mnom!",
+      "Nabroji 3 stvari koje bi mi radio/la da nema apsolutno nikakvih pravila!",
+      "Nabroji 3 mjesta na tijelu gdje želiš osjetiti bol i užitak istovremeno!",
+      "Nabroji 3 načina kako bi me potpuno podredio/la sebi!",
+      "Nabroji 3 najprljavije naredbe koje mi možeš dati odmah sada!"
+    ]
+  },
+  twister: {
+    soft: [
+      "Lijeva ruka na partnerovo desno rame.",
+      "Desna ruka na partnerov lijevi obraz.",
+      "Nasloni čelo na partnerovo čelo.",
+      "Desno koljeno prisloni uz partnerovo lijevo koljeno.",
+      "Lijeva ruka isprepletena s partnerovom desnom rukom.",
+      "Brada naslonjena na partnerovo lijevo rame.",
+      "Desno stopalo preko partnerovog lijevog stopala.",
+      "Lijeva ruka na partnerov trbuh.",
+      "Desni lakat naslonjen na partnerovo bedro.",
+      "Poljubi partnera u nos i zadrži položaj.",
+      "Lijeva ruka iza partnerovog vrata.",
+      "Desna ruka na partnerovom srcu."
+    ],
+    hot: [
+      "Desna ruka na partnerovu stražnjicu.",
+      "Lijeva ruka na partnerovo unutarnje bedro.",
+      "Usne prislonjene na partnerov vrat.",
+      "Desno koljeno gurnuto između partnerovih nogu.",
+      "Lijeva ruka zavučena ispod partnerove majice na leđa.",
+      "Bokovi čvrsto prislonjeni uz partnerove bokove.",
+      "Desna ruka drži partnera za kosu na potiljku.",
+      "Lijevo stopalo masira partnerov list.",
+      "Prsa čvrsto pritisnuta uz partnerova prsa.",
+      "Desna ruka na partnerovom trbuhu ispod odjeće.",
+      "Nos i usne u partnerovom uhu.",
+      "Lijeva ruka čvrsto drži partnerov struk."
+    ],
+    hard: [
+      "Desna ruka na partnerovom međunožju (preko ili ispod rublja).",
+      "Jezik prislonjen na partnerovu ključnu kost.",
+      "Lijeva ruka drži obje partnerove ruke iza njegovih/njezinih leđa.",
+      "Zajaši partnerovo bedro i zadrži pritisak.",
+      "Desna ruka ispod partnerovog donjeg rublja na stražnjici.",
+      "Usne na partnerovom unutarnjem bedru.",
+      "Lijeva ruka čvrsto drži partnerov vrat (lagani pritisak).",
+      "Prepone čvrsto prislonjene uz partnerove prepone.",
+      "Desna ruka na partnerovim golim grudima/prsima.",
+      "Zubi lagano drže partnerovu donju usnu."
+    ],
+    extreme: [
+      "Usta direktno na partnerovim intimnim dijelovima.",
+      "Prsti desne ruke duboko u partnerovom donjem rublju.",
+      "Lijeva noga prebačena preko partnerovog ramena.",
+      "Partnerova glava pritisnuta uz tvoje međunožje.",
+      "Obje ruke vežu partnerove ruke iznad glave uz pod/krevet.",
+      "Gola koža trbuha i prepona potpuno slijepljena uz partnera.",
+      "Desna ruka na partnerovom analnom području / stražnjici.",
+      "Jezik na partnerovoj najosjetljivijoj točki."
+    ]
   }
 };
 
@@ -1470,7 +1679,11 @@ export default function App() {
           <button onClick={() => setActiveGame('wyr')} className="card neon-blue"><Zap size={40} color="#3b82f6" /><span className="card-title">Što Bi Radije?</span></button>
           <button onClick={() => setActiveGame('guess')} className="card neon-emerald"><Eye size={40} color="#10b981" /><span className="card-title">Pogodi Riječ</span></button>
           <button onClick={() => setActiveGame('dice')} className="card neon-yellow"><Dice5 size={40} color="#eab308" /><span className="card-title">Baci Kockice</span></button>
+          <button onClick={() => setActiveGame('mostLikely')} className="card neon-cyan"><Users size={40} color="#06b6d4" /><span className="card-title">Tko će prije?</span></button>
+          <button onClick={() => setActiveGame('fiveSeconds')} className="card neon-rose"><Timer size={40} color="#f43f5e" /><span className="card-title">5 Sekundi</span></button>
+          <button onClick={() => setActiveGame('twister')} className="card neon-indigo"><Zap size={40} color="#6366f1" /><span className="card-title">Twister za dvoje</span></button>
         </div>
+
         <button onClick={() => setIsSetup(false)} className="back-btn" style={{ marginTop: '30px' }}>Promijeni igrače</button>
       </div>
     );
@@ -1484,9 +1697,170 @@ export default function App() {
       case 'wyr': return <WyrGame />;
       case 'guess': return <GuessGame />;
       case 'dice': return <DiceGame />;
+      case 'mostLikely': return <MostLikelyGame />;
+      case 'fiveSeconds': return <FiveSecondsGame />;
+      case 'twister': return <TwisterGame />;
       default: return null;
     }
   };
+  const MostLikelyGame = () => {
+    if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
+    const [currentText, setCurrentText] = useState("Na 3, 2, 1 oboje pokažite prstom na osobu!");
+    const nextQuestion = () => {
+      setCurrentText(popRand(db.mostLikely[activeLevel]));
+    };
+    return (
+      <div className="app-container">
+        <h2 className="subtitle" style={{ color: '#06b6d4' }}>Tko će prije?</h2>
+        <div className="game-box" style={{ borderColor: '#06b6d4' }}><p>{currentText}</p></div>
+        <button onClick={nextQuestion} className="btn-main bg-cyan">SLJEDEĆE PITANJE</button>
+        <button onClick={() => setActiveLevel(null)} className="back-btn"><ArrowLeft size={20}/> Promijeni razinu</button>
+      </div>
+    );
+  };
+
+  const FiveSecondsGame = () => {
+    if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
+    const [customSeconds, setCustomSeconds] = useState(5);
+    const [timeLeft, setTimeLeft] = useState(null);
+    const [isRunning, setIsRunning] = useState(false);
+    const [activePlayer, setActivePlayer] = useState("");
+    const [prompt, setPrompt] = useState("Izvuci zadatak, unesi vrijeme i pokreni sat!");
+
+    React.useEffect(() => {
+      if (!isRunning || timeLeft === null) return;
+      if (timeLeft <= 0) {
+        setIsRunning(false);
+        return;
+      }
+      const timer = setInterval(() => {
+        setTimeLeft((prev) => +(prev - 0.1).toFixed(1));
+      }, 100);
+      return () => clearInterval(timer);
+    }, [isRunning, timeLeft]);
+
+    const generateTask = () => {
+      setIsRunning(false);
+      setTimeLeft(null);
+      setActivePlayer(getRandomPlayer());
+      setPrompt(popRand(db.fiveSeconds[activeLevel]));
+    };
+
+    const startTimer = () => {
+      const sec = Number(customSeconds) > 0 ? Number(customSeconds) : 5;
+      setTimeLeft(sec);
+      setIsRunning(true);
+    };
+
+    return (
+      <div className="app-container">
+        <h2 className="subtitle" style={{ color: '#f43f5e' }}>Utrka s vremenom</h2>
+        
+        {activePlayer && (
+          <p style={{ color: '#f43f5e', fontWeight: '800', fontSize: '1.4rem', marginBottom: '15px', textTransform: 'uppercase' }}>
+            Na redu je: {activePlayer}
+          </p>
+        )}
+
+        <div className="game-box" style={{ borderColor: '#f43f5e', flexDirection: 'column', gap: '15px' }}>
+          <p>{prompt}</p>
+          {timeLeft !== null && (
+            <div style={{ 
+              fontSize: '3.5rem', 
+              fontWeight: '800', 
+              color: timeLeft <= 0 ? '#ef4444' : '#facc15',
+              marginTop: '10px'
+            }}>
+              {timeLeft <= 0 ? "VRIJEME ISTEKLO!" : `${timeLeft}s`}
+            </div>
+          )}
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', width: '100%', maxWidth: '500px' }}>
+          <label style={{ color: '#9ca3af', fontWeight: '600', whiteSpace: 'nowrap' }}>Vrijeme (sek):</label>
+          <input 
+            type="number" 
+            min="1" 
+            max="60" 
+            value={customSeconds} 
+            onChange={(e) => setCustomSeconds(e.target.value)}
+            className="input-field"
+            style={{ marginBottom: 0, padding: '12px', fontSize: '1.1rem' }}
+          />
+        </div>
+
+        <div className="btn-row">
+          <button onClick={generateTask} className="btn-half bg-wyr">NOVI ZADATAK</button>
+          <button onClick={startTimer} disabled={isRunning} className="btn-half bg-rose">
+            {isRunning ? "TEČE..." : "POKRENI SAT"}
+          </button>
+        </div>
+
+        <button onClick={() => { setActiveLevel(null); setIsRunning(false); setTimeLeft(null); setActivePlayer(""); }} className="back-btn">
+          <ArrowLeft size={20}/> Promijeni razinu
+        </button>
+      </div>
+    );
+  };
+
+  const TwisterGame = () => {
+    if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
+    const [moves, setMoves] = useState([]);
+    const [turnIndex, setTurnIndex] = useState(0);
+
+    const addMove = () => {
+      const currentPlayer = turnIndex % 2 === 0 ? players.p1 : players.p2;
+      const task = popRand(db.twister[activeLevel]);
+      if (task.includes("KRAJ!")) {
+        setMoves([{ player: "KRAJ", text: task }]);
+        return;
+      }
+      setMoves(prev => [{ player: currentPlayer, text: task }, ...prev]);
+      setTurnIndex(prev => prev + 1);
+    };
+
+    const resetTwister = () => {
+      setMoves([]);
+      setTurnIndex(0);
+    };
+
+    return (
+      <div className="app-container">
+        <h2 className="subtitle" style={{ color: '#6366f1' }}>Twister za dvoje</h2>
+        <p style={{ color: '#9ca3af', marginBottom: '20px' }}>Zadržite sve prethodne poze dok dodajete nove! Tko prvi padne ili popusti, gubi.</p>
+
+        <div className="game-box" style={{ borderColor: '#6366f1', flexDirection: 'column', gap: '12px', alignItems: 'stretch', textAlign: 'left', maxHeight: '320px', overflowY: 'auto' }}>
+          {moves.length === 0 ? (
+            <p style={{ textAlign: 'center', color: '#9ca3af' }}>Pritisni gumb za prvi potez!</p>
+          ) : (
+            moves.map((m, idx) => (
+              <div key={idx} style={{ 
+                padding: '12px 15px', 
+                borderRadius: '12px', 
+                background: idx === 0 ? 'rgba(99, 102, 241, 0.25)' : 'rgba(255, 255, 255, 0.05)',
+                border: idx === 0 ? '1px solid #6366f1' : '1px solid transparent',
+                opacity: idx === 0 ? 1 : 0.65,
+                fontSize: idx === 0 ? '1.25rem' : '1rem'
+              }}>
+                <span style={{ color: '#818cf8', fontWeight: '800' }}>{m.player}: </span>
+                <span>{m.text}</span>
+              </div>
+            ))
+          )}
+        </div>
+
+        <div className="btn-row">
+          <button onClick={addMove} className="btn-half bg-indigo">SLJEDEĆI POTEZ</button>
+          <button onClick={resetTwister} className="btn-half" style={{ background: 'rgba(255,255,255,0.1)' }}>ISPRAZNITI</button>
+        </div>
+
+        <button onClick={() => { setActiveLevel(null); resetTwister(); }} className="back-btn">
+          <ArrowLeft size={20}/> Promijeni razinu
+        </button>
+      </div>
+    );
+  };
 
   return <div style={{ width: '100%' }}>{renderGame()}</div>;
+  
 }
