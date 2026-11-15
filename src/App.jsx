@@ -13,114 +13,214 @@ const db = {
   tod: {
     soft: {
       truths: [
-        "Koja sitnica te u toku dana najčešće podsjeti na mene?",
-        "Da možemo sutra otputovati bilo gdje zajedno, kamo bismo išli?",
-        "Koji moj fizički atribut si prvo primijetio/la kad smo se upoznali?",
-        "Kada si se točno počeo/la zaljubljivati u mene?",
-        "Koju moju manu zapravo smatraš jako simpatičnom?",
-        "Koji naš dosadašnji spoj ti je ostao u najljepšem sjećanju?",
-        "Da moraš izdvojiti jednu stvar kojom te uvijek smirim, koja bi to bila?",
-        "Koju bi moju naviku volio/la da nikada ne promijenim?",
-        "Što je najslađa stvar koju sam ikada napravio/la za tebe?",
-        "Kako bi izgledao tvoj savršeni dan proveden sa mnom?",
-        "Koji moj odjevni predmet najviše voliš vidjeti na meni?",
-        "Koju si pjesmu slušao/la i pomislio/la na nas?",
-        "Što najviše voliš raditi sa mnom kad nitko ne gleda?",
-        "Koji je najljepši kompliment koji si dobio/la od mene?",
-        "Što te kod mene najviše nasmijava?",
-        "Koja je tvoja najdraža uspomena s našeg prvog poljupca?",
-        "Što misliš, u čemu smo nas dvoje najsličniji?",
-        "Koji ti je bio najneugodniji trenutak pred mnom na početku veze?",
-        "Da možeš birati, kako bismo proslavili našu iduću godišnjicu?",
-        "Što te najviše iznenadilo kod mene nakon što smo se bolje upoznali?",
-        "Koji moj izraz lica ti je najdraži?",
-        "Kada bi pisao/la knjigu o nama, kako bi se zvalo prvo poglavlje?",
-        "Što si pomislio/la kad sam te prvi put uhvatio/la za ruku?",
-        "Koja ti je moja poruka izmamila najveći osmijeh na lice?",
-        "Zbog čega se uz mene osjećaš najsigurnije?"
+        "Koja je najljepša uspomena koju imaš s naših putovanja ili izleta?",
+        "Što si prvo pomislio/la kada si upoznao/la moje roditelje ili obitelj?",
+        "Koji moj talent ili vještinu najviše cijeniš?",
+        "Da moraš odabrati jednu našu zajedničku pjesmu, koja bi to bila?",
+        "Koja sitnica koju svakodnevno radim ti uvijek popravi loš dan?",
+        "Što misliš da je naša najveća snaga kao para?",
+        "Kada si zadnji put bio/la istinski ponosan/na na mene?",
+        "Koji ti je moj najdraži izraz lica kada sam sretan/na?",
+        "Da možemo sutra usvojiti bilo kojeg kućnog ljubimca, kojeg bi odabrao/la?",
+        "Što najviše voliš kod načina na koji komuniciramo?",
+        "Koji je najromantičniji film koji bi volio/la da pogledamo zajedno?",
+        "Što si naučio/la o sebi otkako smo zajedno?",
+        "Koja ti je moja najdraža uspomena iz djetinjstva koju sam ti ispričao/la?",
+        "Koji je tvoj omiljeni dio dana kada smo zajedno?",
+        "Da imamo neograničen budžet za jedan vikend, kako bismo ga proveli?",
+        "Što misliš da nas dvoje čini drugačijima od drugih parova?",
+        "Koji ti je moj najdraži komad nakita ili modni dodatak koji nosim?",
+        "Kada si se zadnji put nasmijao/la do suza zbog mene?",
+        "Što najviše voliš raditi nedjeljom ujutro sa mnom?",
+        "Koju moju osobinu bi volio/la da i ti posjeduješ?",
+        "Koji je najbolji savjet koji sam ti ikada dao/la?",
+        "Što misliš da će biti naš najveći zajednički uspjeh u budućnosti?",
+        "Koji ti je moj najdraži obrok koji ti pripremam?",
+        "Kada si prvi put osjetio/la da mi možeš u potpunosti vjerovati?",
+        "Koja je najluđa avantura na koju bi volio/la da odemo zajedno?",
+        "Što te najviše opušta kada si u mom zagrljaju?",
+        "Koji je tvoj najdraži poklon koji si mi ikada kupio/la ili napravio/la?",
+        "Što misliš, tko je od nas dvoje romantičniji?",
+        "Koja je tvoja omiljena naša zajednička fotografija i zašto?",
+        "Što najviše voliš kod mog glasa?",
+        "Da moraš opisati naš prvi poljubac u tri riječi, koje bi to bile?",
+        "Koji ti je moj najdraži hobi ili interes?",
+        "Što misliš da je najvažnije za dugu i sretnu vezu?",
+        "Kada si zadnji put osjetio/la leptiriće u trbuhu zbog mene?",
+        "Koja je tvoja omiljena šala ili interna fora koju samo nas dvoje razumijemo?",
+        "Što bi volio/la da češće radimo zajedno tijekom tjedna?",
+        "Koji je najljepši kompliment koji si čuo/la o nama od drugih ljudi?",
+        "Što te kod mene najviše inspirira da budeš bolja osoba?",
+        "Koji ti je naš najdraži zajednički blagdan ili proslava?",
+        "Da možeš ponovno proživjeti jedan naš zajednički dan, koji bi to bio?",
+        "Što najviše voliš kada se držimo za ruke?",
+        "Koji je tvoj omiljeni miris koji povezuješ sa mnom?",
+        "Što misliš da je najslađe kod načina na koji se budim?",
+        "Koju bi novu vještinu volio/la da naučimo zajedno?",
+        "Koji ti je moj najdraži osmijeh?",
+        "Što najviše cijeniš kod moje podrške kada ti je teško?",
+        "Da imamo svoj kafić ili restoran, kako bi se zvao?",
+        "Koja je tvoja omiljena uspomena s našeg prvog zajedničkog ljetovanja ili zimovanja?",
+        "Što te najviše veseli u vezi naše zajedničke budućnosti?",
+        "Koji je najljepši san koji si ikada sanjao/la o nama?"
       ],
       dares: [
-        "Masiraj mi ramena i vrat točno dvije minute.",
-        "Gledaj me ravno u oči punu minutu bez progovorene riječi.",
-        "Daj mi najduži i najnježniji zagrljaj danas.",
-        "Poljubi me u obraz i zadrži usne tamo 10 sekundi.",
-        "Ispričaj mi svoju najdražu uspomenu na nas zatvorenih očiju.",
-        "Drži me za ruku dok traje sljedeća runda igre.",
-        "Pohvali tri stvari na mom tijelu koje nisu seksualne.",
-        "Nježno mi prolazi prstima kroz kosu cijelu minutu.",
-        "Daj mi 5 brzih poljubaca u različite dijelove lica.",
-        "Pjevaj mi refren romantične pjesmu držeći me za ruku.",
-        "Lezi mi u krilo i dopusti da te mazim po glavi 2 minute.",
-        "Poljubi me u vrh nosa i reci mi točno zašto me voliš.",
-        "Prekriži mi ruke preko leđa i snažno me zagrli 30 sekundi.",
-        "Uzmite moj mobitel i promijeni mi pozadinu u našu zajedničku sliku.",
-        "Mazi mi ruku i podlakticu zatvorenih očiju 1 minutu.",
-        "Pokušaj me nasmijati u manje od 30 sekundi bez ikakvog dodira.",
-        "Opiši moj karakter u 5 pozitivnih riječi bez previše razmišljanja.",
-        "Pleši sa mnom spori ples jednu minutu u tišini sobe.",
-        "Daj mi poljubac na svako mjesto na licu gdje imam madež ili pjegicu.",
-        "Stavi moju ruku na svoje srce i gledaj me u oči 30 sekundi.",
-        "Nasloni glavu na moje rame i nemoj se pomicati do kraja runde.",
-        "Poljubi me u čelo i reci mi jednu stvar kojom se ponosiš kod mene.",
-        "Nacrtaj mi srca prstom po dlanu.",
-        "Spoji svoj nos s mojim i trljaj ih 15 sekundi.",
-        "Zagrli me s leđa i šapni mi nešto lijepo."
+        "Poljubi me u oba obraza, čelo i vrh nosa ovim redoslijedom.",
+        "Masiraj mi dlanove i svaki prst pojedinačno jednu minutu.",
+        "Isplaniraj naš sljedeći spoj u tri rečenice i reci mi kada idemo.",
+        "Gledaj me u oči i reci mi pet stvari koje najviše voliš na meni.",
+        "Zagrli me s leđa i ljuljaj nas lagano u ritmu zamišljene glazbe 30 sekundi.",
+        "Nacrtaj naš zajednički portret na papiru u manje od 60 sekundi.",
+        "Šapni mi na uho jednu tajnu želju vezanu za naše sljedeće putovanje.",
+        "Drži moje lice u svojim rukama i gledaj me s osmijehom 30 sekundi.",
+        "Otpjevaj refren svoje omiljene ljubavne pjesme gledajući me ravno u oči.",
+        "Poljubi me u unutarnju stranu zgloba na obje ruke.",
+        "Složi kratku pjesmicu od četiri stiha o našoj ljubavi.",
+        "Lezi pored mene i isprepleti svoje prste s mojima na dvije minute.",
+        "Oponašaj moj izraz lica kada sam jako sretan/na ili uzbuđen/na.",
+        "Daj mi deset brzih, nježnih poljubaca po licu.",
+        "Masiraj mi vrat i ramena koristeći samo palčeve jednu minutu.",
+        "Reci mi jednu stvar koju jedva čekaš raditi sa mnom ovog mjeseca.",
+        "Nasloni svoje čelo na moje i diši polako sa mnom 30 sekundi.",
+        "Pohvali moj stil odijevanja danas kao da si modni kritičar.",
+        "Poljubi me u rame i zadrži usne tamo pet sekundi.",
+        "Pokušaj me nasmijati pričajući neki glupi vic bez smijanja.",
+        "Nježno mi prolazi prstima kroz kosu i masiraj mi tjeme dvije minute.",
+        "Stavi svoju ruku na moj obraz i reci mi zašto si sretan/na sa mnom.",
+        "Zapleši sa mnom valcer ili spori ples nasred sobe jednu minutu.",
+        "Poljubi mi svaki prst na lijevoj ruci i reci po jednu lijepu riječ.",
+        "Zagrli me toliko čvrsto da osjetim otkucaje tvog srca.",
+        "Napiši mi kratku poruku na mobitel koju ću pročitati sutra ujutro.",
+        "Prisloni svoj obraz uz moj i ostani tako 20 sekundi.",
+        "Reci mi koja ti je moja najdraža osobina koju sam pokazao/la ovaj tjedan.",
+        "Poljubi me u kut usana jako polako i nježno.",
+        "Masiraj mi listove i stopala dvije minute dok se ja opuštam.",
+        "Opiši našu vezu kao da najavljuješ romantični film u kinu.",
+        "Daj mi poljubac u vrat odmah ispod uha.",
+        "Drži me za obje ruke i reci mi što ti najviše znači kod nas.",
+        "Napravi mi omiljeni topli ili hladni napitak i posluži ga s osmijehom.",
+        "Poljubi me u bradu i nasmiješi se.",
+        "Zatvori oči i pogodi koji dio mog lica dodiruješ svojim prstima.",
+        "Zagrli me tako da mi glava počiva na tvojim prsima jednu minutu.",
+        "Reci mi tri razloga zašto misliš da smo savršen par.",
+        "Nježno mi gladi podlakticu i nadlanicu zatvorenih očiju.",
+        "Poljubi me u kapke dok su mi oči zatvorene.",
+        "Isplaniraj savršenu filmsku večer za nas dvoje (film, grickalice, atmosfera).",
+        "Stavi moju ruku na svoje srce i reci mi nešto lijepo.",
+        "Daj mi najduži zagrljaj koji traje barem 45 sekundi.",
+        "Poljubi mi dlan i zatvori moje prste preko tog poljupca.",
+        "Reci mi jednu stvar koju bi volio/la da zajedno postignemo ove godine.",
+        "Nježno mi uštipni obraz i reci mi da sam sladak/slatka.",
+        "Lezi mi u krilo i dopusti mi da ti mazim lice jednu minutu.",
+        "Poljubi me u čelo i reci mi da sam tvoja sigurna luka.",
+        "Napravi smiješnu grimasu i drži je dok se ne nasmijem.",
+        "Završi ovu rundu jednim dugim, toplim i iskrenim poljupcem u usne."
       ]
     },
     hot: {
       truths: [
-        "Koji dio mog tijela te najviše uzbuđuje kada ga slučajno dodirneš?",
-        "Koji je tvoj najdraži način na koji te dodirujem u javnosti?",
-        "Kada si zadnji put sanjao/la nešto izrazito vruće o nama?",
-        "Koje donje rublje koje posjedujem bi volio/la da nosim svaku večer?",
-        "Postoji li neko mjesto u javnosti gdje bi me volio/la poljubiti, ali nismo?",
-        "Što najviše voliš kada ti prljavo šapnem na uho?",
-        "Koji je tvoj najosjetljiviji dio tijela na kojem obožavaš moje poljupce?",
-        "Koja je tvoja najdraža seksualna fantazija koju si imao/la o meni?",
-        "Sjećaš li se točno što sam nosio/la kad smo prvi put vodili ljubav?",
-        "Kada ti je bilo apsolutno najteže skinuti ruke s mene u društvu?",
-        "Koji moj pogled ili izraz lica te odmah i bez greške napali?",
-        "Da me možeš odmah skinuti, s kojim dijelom odjeće bi počeo/la?",
-        "Jesi li ikada potajno gledao/la moje tijelo kroz odškrinuta vrata kupaonice?",
-        "Što je nešto najviše seksi što sam ti ikada rekao/la?",
-        "Koji dio tvog tijela voliš da najviše diram tijekom predigre?",
-        "Kada si zadnji put razmišljao/la o meni dok si bio/la pod tušem?",
-        "Što najviše voliš da radim s tvojom kosom dok se strastveno ljubimo?",
-        "Koja je najluđa stvar koju si pomislio/la dok smo se ljubili?",
-        "Kada si prvi put u glavi pomislio/la da želiš spavati sa mnom?",
-        "Voliš li kada preuzmem inicijativu u krevetu bez najave?",
-        "Koji parfem koji nosim te najviše izluđuje?",
-        "Jesi li ikada masturbirao/la razmišljajući o nečemu što smo radili dan ranije?",
-        "Koju pozu u kojoj me vidiš preko dana smatraš nevjerojatno privlačnom?",
-        "Što misliš da je moja najprivlačnija kvaliteta u spavaćoj sobi?",
-        "Kako bi opisao/la naš prvi seks u jednoj jedinoj riječi?"
+        "Koja je najseksi poruka koju si ikada dobio/la od mene?",
+        "Koji dio mog tijela najviše voliš ljubiti tijekom predigre?",
+        "Jesi li ikada maštao/la o tome da vodimo ljubav na nekom javnom mjestu i kojem?",
+        "Što te najviše napaljuje kod načina na koji te gledam?",
+        "Koji je tvoj najdraži zvuk koji ispuštam tijekom intimnih trenutaka?",
+        "Kada si zadnji put bio/la toliko napaljen/a da jedva čekaš da ostanemo sami?",
+        "Koju pozu bi volio/la da isprobamo večeras čim završimo igru?",
+        "Što najviše voliš da nosim na sebi prije nego što me skineš?",
+        "Postoji li neka erogena zona na tvom tijelu koju još nisam dovoljno istražio/la?",
+        "Koji ti je naš najuzbudljiviji i najstrastveniji seks do sada?",
+        "Jesi li ikada razmišljao/la o nama dok si se tuširao/la danas?",
+        "Što najviše voliš kada ti radim rukama?",
+        "Koji je tvoj omiljeni trenutak tijekom našeg vođenja ljubavi?",
+        "Jesi li ikada potajno želio/la da te zgrabim i poljubim pred drugima?",
+        "Koja te moja gesta ili pokret odmah baci u seksi raspoloženje?",
+        "Što bi volio/la da ti šapnem na uho dok smo u prepunom restoranu?",
+        "Koji dio predigre ti je apsolutno najdraži i ne možeš bez njega?",
+        "Jesi li ikada masturbirao/la zamišljajući naš sljedeći susret?",
+        "Koja je najluđa ideja za seks koju si ikada imao/la, a nisi mi rekao/la?",
+        "Što najviše voliš kod okusa mojih usana i kože?",
+        "Kada ti je bilo najteže suzdržati se da me ne dodirneš u javnosti?",
+        "Koji moj odjevni predmet ti izgleda najprovokativnije?",
+        "Voliš li više kada smo u krevetu nježni i spori ili strastveni i brzi?",
+        "Što misliš da je moja najseksi osobina?",
+        "Jesi li ikada sanjao/la erotski san u kojem smo glavne uloge nas dvoje?",
+        "Koji je tvoj najdraži način na koji te budim ujutro?",
+        "Što najviše voliš kada te ljubim po vratu i ramenima?",
+        "Postoji li neko mjesto u stanu gdje još nismo vodili ljubav, a želio/la bi?",
+        "Koji je najuzbudljiviji kompliment koji sam ti dao/la o tvom tijelu?",
+        "Što te najviše izluđuje kada te zadirkujem prije seksa?",
+        "Jesi li ikada namjerno obukao/la nešto seksi samo da vidiš moju reakciju?",
+        "Koja je tvoja omiljena uspomena na naš seks izvan spavaće sobe?",
+        "Što najviše voliš raditi meni tijekom predigre?",
+        "Kada si zadnji put pomislio/la na seks sa mnom usred radnog dana?",
+        "Koji dio mog tijela najviše voliš dodirivati dok se ljubimo?",
+        "Voliš li kada imamo kontakt očima tijekom cijelog odnosa?",
+        "Što bi najviše volio/la da ti napravim u idućih deset minuta?",
+        "Koji je tvoj najdraži miris na mom tijelu kada smo blizu?",
+        "Jesi li ikada poželio/la da ostanemo goli u krevetu cijeli vikend?",
+        "Što te kod mene najviše seksualno privlači od prvog dana?",
+        "Koji je najprovokativniji ples ili pokret koji bi volio/la vidjeti od mene?",
+        "Što najviše voliš kada ti prolazim prstima po leđima?",
+        "Jesi li ikada razmišljao/la o tome kako bismo se zabavili u hotelskoj sobi?",
+        "Koja je najseksi stvar koju sam napravio/la a da nisam ni bio/la svjestan/na?",
+        "Što najviše voliš kada ti grickam usne ili uho?",
+        "Postoji li neka pjesma koja te odmah asocira na strast i nas dvoje?",
+        "Koji je tvoj omiljeni trenutak odmah nakon što vodimo ljubav?",
+        "Što bi volio/la da češće iniciram u spavaćoj sobi?",
+        "Kada si zadnji put osjetio/la jake trnce od mog dodira?",
+        "Koju bi ocjenu dao/la našoj kemiji u krevetu i zašto?"
       ],
       dares: [
-        "Otkopčaj mi jedan komad odjeće koristeći isključivo jednu ruku.",
-        "Strastveno me poljubi u vrat, zadrži se tamo i ostavi mokar trag.",
-        "Pleši mi u krilu punu minutu onako kako znaš da volim.",
-        "Skini mi majicu preko glave bez upotrebe ruku (samo zubima).",
-        "Liži mi vrat i ključnu kost polako idućih 30 sekundi.",
-        "Dodiruj mi bedra polako odozdo prema gore, ali stani prije cilja.",
-        "Zaveži mi oči nečim i poljubi me na tri različita mjesta na tijelu.",
-        "Pošalji mi najprljaviju poruku koju možeš smisliti, upravo sada, i gledaj me dok je čitam.",
-        "Ugrizni me lagano za ušnu resicu i diši mi u uho.",
-        "Poljubi me strastveno, s jezikom, točno 30 sekundi bez prestanka.",
-        "Masiraj mi stražnjicu preko hlača jednu minutu.",
-        "Neka ti ruke lutaju mojim tijelom točno jednu minutu dok me gledaš pravo u oči.",
-        "Stavi ruku na moje međunožje (preko odjeće) i ostavi je tamo cijelu iduću rundu.",
-        "Zadirkuj me poljupcima oko usana bez da me stvarno poljubiš punih 30 sekundi.",
-        "Skini jedan svoj komad odjeće na najzavodljiviji mogući način.",
-        "Ljubi me po trbuhu krećući se prema dolje, ali zaustavi se točno iznad ruba hlača.",
-        "Trljaj se o mene dok oboje stojimo priljubljeni jedno uz drugo 30 sekundi.",
-        "Približi se mom licu, prođi jezikom po mojim usnama i odmah se odmakni.",
-        "Zgrabi me za kosu (nježno ali čvrsto) i privuci me u strastven poljubac.",
-        "Ostani samo u donjem rublju za sljedeće 3 runde igre.",
-        "Stavi moju ruku ispod svoje majice na minutu.",
-        "Poljubi me svugdje po licu osim po usnama, na usne smiješ tek na samom kraju.",
-        "Skini mi čarape koristeći samo svoje usne i zube.",
-        "Liži mi prst jedan po jedan, jako polako.",
-        "Stavi moje ruke na svoje grudi/prsa i natjeraj me da te gledam u oči."
+        "Poljubi me strastveno u vrat i polako se spuštaj prema ključnoj kosti 30 sekundi.",
+        "Skini jedan svoj komad odjeće jako polako dok me gledaš ravno u oči.",
+        "Stavi svoju ruku na moje unutarnje bedro i lagano ga masiraj jednu minutu.",
+        "Šapni mi na uho najprljaviju stvar koju želiš da radimo večeras.",
+        "Poljubi me s jezikom punih 45 sekundi bez prekidanja.",
+        "Otkopčaj mi majicu ili košulju koristeći samo jednu ruku.",
+        "Sjedni mi u krilo licem prema meni i ljubi me dok mi ruke lutaju po tvojim leđima.",
+        "Lagano mi grickaj donju usnu tijekom poljupca, a zatim je poliži.",
+        "Zatvori oči i dopusti mi da te ljubim po tijelu gdje god poželim jednu minutu.",
+        "Povuci me za bokove čvrsto k sebi i prisloni svoje tijelo uz moje 30 sekundi.",
+        "Prelazi vrhovima prstiju po mom trbuhu ispod majice jednu minutu.",
+        "Poljubi me u uho, lagano povuci resicu zubima i toplo dahni.",
+        "Skini mi jedan komad odjeće (majicu, remen ili čarape) bez upotrebe ruku.",
+        "Masiraj mi stražnjicu čvrstim, ali senzualnim pokretima 45 sekundi.",
+        "Zadirkuj moje usne svojima na milimetar udaljenosti bez dodira 30 sekundi.",
+        "Napiši mi na mobitel jednu vruću poruku kao da nismo u istoj sobi.",
+        "Poljubi me po trbuhu od pupka prema rubu hlača, ali stani na samom rubu.",
+        "Uhvati me nježno, ali čvrsto za kosu na potiljku i privuci u dubok poljubac.",
+        "Ostani bez majice (ili u grudnjaku/potkošulji) iduće tri runde.",
+        "Stavi moju ruku na svoje grudi/prsa i pritisni je dok me ljubiš.",
+        "Pleši zavodljivo ispred mene 30 sekundi uz zamišljeni ili pravi ritam.",
+        "Liži mi vrat od ramena prema uhu jako polako.",
+        "Zaveži mi oči maramom ili majicom i poljubi me na tri neočekivana mjesta.",
+        "Prisloni me uza zid i ljubi me strastveno kao u filmskoj sceni.",
+        "Prelazi noktima lagano niz moja leđa od vrata do struka.",
+        "Skini moje čarape i izmasiraj mi stopala i gležnjeve senzualno.",
+        "Stavi moju ruku na svoje bedro i vodi je sve više prema gore.",
+        "Poljubi svaki centimetar moje ključne kosti s jedne strane na drugu.",
+        "Gledaj me u oči dok polako ližeš svoje usne i reci mi što želiš.",
+        "Zajaši me preko odjeće i napravi nekoliko sporih pokreta bokovima.",
+        "Otkopčaj mi hlače (ili otkopčaj remen) i ostavi ih tako iduću rundu.",
+        "Poljubi me u unutarnju stranu bedra iznad koljena.",
+        "Diši mi duboko u vrat dok me čvrsto grliš s leđa jednu minutu.",
+        "Stavi moj prst u svoja usta i polako ga poliži gledajući me u oči.",
+        "Masiraj mi ramena i prsa koristeći toplo ulje ili kremu.",
+        "Reci mi tri prljave riječi koje najviše voliš čuti u krevetu.",
+        "Poljubi me u trbuh, zatim u prsa, pa ravno u usne.",
+        "Skini svoj donji dio odjeće i ostani samo u majici i donjem rublju.",
+        "Trljaj svoj nos i usne o moj vrat dok mi šapćeš što te pali.",
+        "Drži moje ruke iznad moje glave jednom rukom dok me drugom maziš.",
+        "Poljubi me toliko strastveno da oboje ostanemo bez daha.",
+        "Prelazi kockicom leda preko mojih usana i vrata.",
+        "Sjedni pored mene i stavi moju ruku ispod svog donjeg rublja na 15 sekundi.",
+        "Ugrizni me lagano za rame i odmah poljubi to mjesto.",
+        "Skini mi majicu preko glave i poljubi me po cijelim prsima.",
+        "Neka tvoje ruke istražuju moje tijelo ispod odjeće jednu minutu.",
+        "Poljubi me u kut usana i polako klizi prema obrazu i uhu.",
+        "Zagrli me s leđa, zavuci ruke pod moju majicu i mazi mi trbuh i prsa.",
+        "Pokaži mi svojim rukama točno kakav dodir najviše voliš.",
+        "Završi rundu najvrućim poljupcem večeri koji traje barem jednu minutu."
       ]
     },
     hard: {
@@ -696,108 +796,158 @@ const db = {
       { a: "Da provedemo cijeli život zajedno u malom selu", b: "Da živimo u velikom gradu s pogledom na krovove" }
     ],
     hot: [
-      { a: "Seksati se pod tušem s toplom vodom", b: "Seksati se na stražnjem sjedalu auta noću" },
-      { a: "Da ti šapćem prostačke i prljave stvari u kinu", b: "Da te strastveno ljubim ispred tvojih prijatelja" },
-      { a: "Dobivati provokativne poruke dok si na sastanku", b: "Dobivati ekskluzivne slike na mobitel dok radiš" },
-      { a: "Biti uhvaćen/a u javnosti u strastvenom poljupcu", b: "Da nitko ne smije znati što ti radim ispod stola" },
-      { a: "Imati seks na kuhinjskom pultu dok kuhamo", b: "Imati seks na debelom tepihu u dnevnoj sobi" },
-      { a: "Da te zavedem preko poruka pa da te dočekam u hodniku", b: "Da me ti zaskočiš čim uđem kroz vrata" },
-      { a: "Da ti grizem usne dok me ljubiš", b: "Da ti ostavljam crvene tragove po vratu" },
-      { a: "Nositi čipkasto rublje ispod obične odjeće cijeli dan", b: "Biti potpuno gol/a ispod kaputa dok hodamo" },
-      { a: "Da mi skidaš odjeću presporo i senzualno", b: "Da mi potrgaš majicu u naletu strasti" },
-      { a: "Seksati se u sobi s upaljenim svim svjetlima", b: "Seksati se u potpunom mraku uz svijeće" },
-      { a: "Da te ljubim od glave do pete pola sata", b: "Da mi pružiš brzi, strastveni i grublji quickie" },
-      { a: "Da ti vežem ruke svilenom maramom", b: "Da ti sjednem na lice i ne dam ti da se makneš" },
-      { a: "Da vodimo ljubav uz glasnu glazbu", b: "Da vodimo ljubav u potpunoj tišini osluškujući uzdahe" },
-      { a: "Da te masiram s toplim uljem i završim seksom", b: "Da me ti iznenadiš seksi masažom kad dođem doma" },
-      { a: "Da ti ljubim stopala i prste", b: "Da mi grizeš bedra do ruba bola" },
-      { a: "Imati seks na plaži pod zvijezdama", b: "Imati seks na balkonu na visokom katu" },
-      { a: "Da ti radim striptiz uz tvoju omiljenu pjesmu", b: "Da mi ti odradiš provokativan ples u krilu" },
-      { a: "Da te ljubim dok mi sjediš u krilu u restoranu", b: "Da ti gurnem ruku u hlače dok se vozimo u taksiju" },
-      { a: "Da te probudim ranim jutarnjim oralnim seksom", b: "Da te uspavam strastvenim maženjem i parenjem" },
-      { a: "Da ti šapnem najprljavniju fantaziju na uho", b: "Da mi je odglumiš bez da progovoriš i riječ" },
-      { a: "Da ti cijeli dan ne dozvolim da nosiš donje rublje", b: "Da ja cijeli dan nosim tvoje donje rublje" },
-      { a: "Da te diram pred ogledalom dok se oblačiš", b: "Da me gledaš dok se sama/sam zadovoljavam" },
-      { a: "Imati seks u tuđoj kući dok su u drugoj sobi", b: "Imati seks u hotelskoj sobi s pogledom na grad" },
-      { a: "Da mi ljubiš vrat dok vozim auto", b: "Da ti stavim ruku međunožje dok ti voziš" },
-      { a: "Da te mazim ledom po cijelom tijelu", b: "Da mi kaplješ topli vosak po prsima" },
-      { a: "Da ti vežem oči i radim što god želim", b: "Da ti meni vežem oči i ispunjavaš moje želje" },
-      { a: "Da ti grizem donju usnu do krvi", b: "Da mi grebeš leđa noktima dok svršavam" },
-      { a: "Da vodimo ljubav na podu pokraj kreveta", b: "Da vodimo ljubav na perilici rublja koja radi" },
-      { a: "Da ti skinem svu odjeću jednim potezom", b: "Da polako otkopčavam svaki gumb na tvojoj košulji" },
-      { a: "Da te primim za kosu i povučem tijekom poljupca", b: "Da mi stisneš vrat svojom šakom dok te gledam" },
-      { a: "Da te pitam za prljavu uslugu usred ručka", b: "Da mi pošalješ sliku bez gaćica ispod stola" },
-      { a: "Imati brzi seks u liftu zgrade", b: "Imati seks na stepenicama u haustoru" },
-      { a: "Da ti ljubim svaku oblinu na tijelu sat vremena", b: "Da odmah prijeđemo na stvar bez okolišanja" },
-      { a: "Da ti kupim najskuplje i najseksi rublje", b: "Da ga strgajem s tebe u prvih 5 minuta" },
-      { a: "Da te diram mokrim prstima cijelu večer", b: "Da mi ližeš uho dok ti šapćem prostote" },
-      { a: "Da ti priredim seksi iznenađenje u kupaonici", b: "Da me nađeš golog/u u krevetu s ružom u ustima" },
-      { a: "Da mi šapneš koliko te palim na glas", b: "Da mi svršeni osmijeh pokažeš bez riječi" },
-      { a: "Da vodimo ljubav tri puta zaredom u jednoj noći", b: "Da vodimo ljubav jednom, ali da traje sat vremena" },
-      { a: "Da ti ližem vrat dok kuham ručak", b: "Da me prisloniš uz štednjak dok ti sjednem u krilo" },
-      { a: "Da mi kupiš bič ili lisice za rođendan", b: "Da mi kupiš seksi kostim po tvom izboru" },
-      { a: "Da te ljubim dok si u kadi punoj pjene", b: "Da se kupamo zajedno i sapunamo jedno drugo" },
-      { a: "Da te zavedem u mraku kafića", b: "Da te natjeram da se zacrveniš pred svima" },
-      { a: "Da ti pokažem novu pozu koju sam smislio/la", b: "Da radimo našu staru provjerenu klasiku do kraja" },
-      { a: "Da ti ljubim intimne dijelove na javnom mjestu", b: "Da me zadovoljavaš dok nas dijeli tanki zid" },
-      { a: "Da te grizem po stražnjici dok hodamo po stanu", b: "Da mi udaraš pljeskove po guzi dok perem suđe" },
-      { a: "Da ti dam potpunu kontrolu nad mojim tijelom", b: "Da ja preuzmem apsolutnu dominaciju nad tobom" },
-      { a: "Da mi priznaš s kim si želio/la spavati prije mene", b: "Da mi priznaš da ti nitko nikad nije bio bolji u krevetu" },
-      { a: "Da vodimo ljubav bez prekidanja cijelo popodne", b: "Da nasred dnevne sobe imamo divlji petominutni seks" },
-      { a: "Da ti šapnem najprljavniju tajnu na uho", b: "Da mi ispuniš najluđu želju bez postavljanja pitanja" },
-      { a: "Da te gledam u oči dok doživljavaš vrhunac", b: "Da mi zatvoriš oči i natjeraš me da svrsim na silu" }
+      { a: "Da ti skinem majicu polako zubima", b: "Da ti otkopčam hlače jednom rukom dok te gledam u oči" },
+      { a: "Seksati se na kuhinjskom stolu dok se hladi večera", b: "Seksati se u hodniku čim zatvorimo ulazna vrata" },
+      { a: "Da ti ostavim tragove noktiju po cijelim leđima", b: "Da ti ostavim crveni trag ugriza na ramenu" },
+      { a: "Nositi seksi donje rublje cijeli dan ispod poslovne odjeće", b: "Ići na večeru bez donjeg rublja ispod hlača ili haljine" },
+      { a: "Da ti šapćem prljave stvari dok smo u prepunom kafiću", b: "Da ti šaljem eksplicitne slike dok sjediš na obiteljskom ručku" },
+      { a: "Imati spori, senzualni seks uz svijeće koji traje sat vremena", b: "Imati divlji, brzi seks na brzaka u autu" },
+      { a: "Da te izmasiram toplim uljem od glave do pete", b: "Da te izludim kockicom leda po najosjetljivijim točkama" },
+      { a: "Da te probudim ranim jutarnjim poljupcima po cijelom tijelu", b: "Da te zaskočim pod tušem prije posla" },
+      { a: "Da mi plešeš u krilu uz svoju omiljenu pjesmu", b: "Da mi izvedeš spori striptiz dok sjedim na rubu kreveta" },
+      { a: "Da ti zavežem ruke svilenom kravatom", b: "Da ti stavim povez na oči i iznenadim te dodirima" },
+      { a: "Voditi ljubav pred velikim ogledalom", b: "Voditi ljubav na balkonu pod okriljem noći" },
+      { a: "Da ti ljubim unutarnju stranu bedra do ruba izdržljivosti", b: "Da ti grickam ušnu resicu dok ti teško dišem u vrat" },
+      { a: "Da cijelu večer ne smiješ dodirnuti mene, samo ja tebe", b: "Da cijelu večer ja moram slušati svaku tvoju naredbu" },
+      { a: "Imati seks na perilici rublja dok radi centrifuga", b: "Imati seks na mekanom tepihu ispred upaljenog kamina ili TV-a" },
+      { a: "Da ti pošaljem glasovnu poruku svojih uzdaha", b: "Da te nazovem i šapćem ti što ću ti raditi kad dođeš doma" },
+      { a: "Da mi ljubiš vrat dok vozim po otvorenoj cesti", b: "Da ti stavim ruku na međunožje dok čekamo na semaforu" },
+      { a: "Da ti skinem čarape i ljubim ti stopala", b: "Da ti masiram stražnjicu s uljem deset minuta" },
+      { a: "Da vodimo ljubav uz glasnu rock ili pop glazbu", b: "Da vodimo ljubav u apsolutnoj tišini gdje se čuje svaki dodir" },
+      { a: "Da ti kupim seksi kostim po svom izboru", b: "Da zajedno odemo u sex shop i izaberemo novu igračku" },
+      { a: "Da te zadirkujem usnama bez poljupca punih pet minuta", b: "Da te strastveno ljubim dok oboje ne ostanemo bez daha" },
+      { a: "Imati brzi seks u garderobi dok kupujemo odjeću", b: "Imati seks u praznom kinu u zadnjem redu" },
+      { a: "Da te držim za kosu dok se strastveno ljubimo", b: "Da ti pritisnem ruke iznad glave uz madrac" },
+      { a: "Da jedeš šlag ili čokoladu s mog golog tijela", b: "Da piješ vino ili šampanjac iz mog pupka" },
+      { a: "Da ti cijeli dan šaljem izazove koje moraš odraditi na poslu", b: "Da te navečer dočekam u sobi spremnoj za igru" },
+      { a: "Da te diram ispod stola na večeri s prijateljima", b: "Da pobjegnemo s tuluma na 15 minuta u zaključani WC" },
+      { a: "Da ti skinem svaki komad odjeće izrazito sporo", b: "Da u naletu strasti rastrgam majicu s tebe" },
+      { a: "Da te ljubim po trbuhu sve niže i niže pa naglo stanem", b: "Da ti pružim oralno zadovoljstvo bez ikakvog uvoda" },
+      { a: "Da provedemo cijelu nedjelju goli u krevetu", b: "Da odemo na vikend u wellness hotel i ne izađemo iz sobe" },
+      { a: "Da mi šapneš svoju najdražu pozu na uho", b: "Da me bez riječi postaviš u pozu koju najviše želiš" },
+      { a: "Da ti grizem donju usnu tijekom poljupca", b: "Da ti prelazim jezikom po ključnoj kosti" },
+      { a: "Imati seks na plaži dok šume valovi", b: "Imati seks u šumi daleko od svih pogleda" },
+      { a: "Da ti stavim ruku pod majicu dok gledamo film", b: "Da mi sjedneš u krilo okrenut/a prema meni dok pričamo" },
+      { a: "Da te fotografiram u seksi pozi samo za moju galeriju", b: "Da snimimo kratki video našeg strastvenog ljubljenja" },
+      { a: "Da ti vežem oči i hranim te jagodama", b: "Da ti vežem ruke i ljubim te gdje god poželim" },
+      { a: "Da te iznenadim novim donjim rubljem kad otvoriš vrata", b: "Da te dočekam potpuno gol/a ispod balonera" },
+      { a: "Da te masiram po leđima i polako spuštam ruke niže", b: "Da me zagrliš s leđa i prisloniš se uz mene dok kuham" },
+      { a: "Da igramo poker na skidanje", b: "Da igramo bocu istine u dvoje s prljavim zadacima" },
+      { a: "Da ti šapćem prljave riječi na stranom jeziku", b: "Da ti izgovaram tvoje ime na glas dok svršavam" },
+      { a: "Da vodimo ljubav ujutro čim otvorimo oči", b: "Da vodimo ljubav kasno u noć kad smo već iscrpljeni" },
+      { a: "Da ti ljubim zapešća i unutarnju stranu ruku", b: "Da ti ljubim donji dio leđa iznad stražnjice" },
+      { a: "Da ti dozvolim da biraš svaku našu aktivnost večeras", b: "Da ja preuzmem potpunu kontrolu nad tobom iduća dva sata" },
+      { a: "Da se tuširamo zajedno i sapunamo jedno drugo", b: "Da se kupamo u kadi punoj pjene uz čašu vina" },
+      { a: "Da ti lagano pljusnem stražnjicu dok prolaziš pokraj mene", b: "Da te snažno privučem za bokove k sebi" },
+      { a: "Da ti stavim kockicu leda u usta tijekom poljupca", b: "Da popijem gutljaj toplog čaja i poljubim te" },
+      { a: "Da ti priznam o čemu sam maštao/la danas na poslu", b: "Da mi opišeš svoj najuzbudljiviji san o nama" },
+      { a: "Da vodimo ljubav na visokom katu uz otvorene zavjese", b: "Da vodimo ljubav u autu dok vani pada jaka kiša" },
+      { a: "Da te diram preko odjeće dok ne poludiš od želje", b: "Da odmah strgnemo odjeću i bacimo se na krevet" },
+      { a: "Da ti ljubim vrat dok ti pokušavaš ostati ozbiljan/na na telefon", b: "Da ti šaljem seksi poruke dok si na dosadnom predavanju ili sastanku" },
+      { a: "Da te izludim laganim grebanjem po tjemenu i vratu", b: "Da te stisnem uza zid u hodniku i strastveno poljubim" },
+      { a: "Da ti priredim romantičnu večeru koja završava na stolu", b: "Da preskočimo večeru i odmah odemo u spavaću sobu" },
+      { a: "Da nosiš moju košulju zakopčanu samo na jedan gumb", b: "Da budeš samo u boksericama ili gaćicama cijelo popodne" },
+      { a: "Da ti ljubim prste na rukama jedan po jedan", b: "Da mi staviš svoje prste u usta dok me gledaš" },
+      { a: "Da vodimo ljubav u hotelskoj sobi na putovanju", b: "Da vodimo ljubav u šatoru usred prirode" },
+      { a: "Da te zadirkujem perom po cijelom tijelu", b: "Da te mazim svilenom maramom dok su ti oči zatvorene" },
+      { a: "Da ti šapnem koliko te želim pred drugima", b: "Da ti to pokažem čvrstim stiskom ruke ispod stola" },
+      { a: "Da vodimo ljubav bez upotrebe ruku (samo usne i tijelo)", b: "Da se zadovoljavamo isključivo rukama gledajući se u oči" },
+      { a: "Da ti ljubim svaku točku na licu osim usana", b: "Da ti odmah dam najdublji francuski poljubac" },
+      { a: "Da te iznenadim masažom stopala nakon dugog dana", b: "Da te iznenadim oralnim seksom čim uđeš u sobu" },
+      { a: "Da ti otkopčam grudnjak ili remen bez gledanja", b: "Da mi polako skidaš komad po komad odjeće uz glazbu" },
+      { a: "Da se ljubimo na kiši kao u filmu", b: "Da se ljubimo u mraku kinodvorane" },
+      { a: "Da ti stavim ruku na srce dok ubrzano dišeš", b: "Da osjetiš moje ubrzano bilo na mom vratu" },
+      { a: "Da ti priznam koja me tvoja poza najviše uzbuđuje", b: "Da isprobamo potpuno novu pozu iz Kama Sutre" },
+      { a: "Da te budim poljupcima po leđima", b: "Da te uspavljujem nježnim dodirima po bedrima" },
+      { a: "Da te držim za ruke iznad glave dok te ljubim", b: "Da mi obaviješ noge oko struka dok stojimo" },
+      { a: "Da ti dam potpunu slobodu da me diraš gdje god želiš", b: "Da ti ja pokažem točno gdje i kako želim da me diraš" },
+      { a: "Da se igramo doktora i pacijenta", b: "Da se igramo stranaca koji su se tek upoznali u baru" },
+      { a: "Da ti šapćem prostote na uho dok plešemo", b: "Da te strastveno poljubim usred plesnog podija" },
+      { a: "Da ti kupim mirisno ulje za erotsku masažu", b: "Da kupimo jestivu boju za tijelo" },
+      { a: "Da te gledam dok se oblačiš za izlazak", b: "Da ti pomognem skinuti sve kad se vratimo kući" },
+      { a: "Da vodimo ljubav dva puta zaredom bez pauze", b: "Da vodimo ljubav jednom, ali da traje cijelu vječnost" },
+      { a: "Da ti ljubim rame dok me grliš s leđa", b: "Da te privučem za vrat i poljubim u čelo pa u usne" },
+      { a: "Da te iznenadim doručkom u krevetu (gol/a)", b: "Da ti donesem kavu u krevet i ostanem ispod pokrivača" },
+      { a: "Da ti pošaljem sliku u ogledalu prije tuširanja", b: "Da me nazoveš na video poziv dok sam u kadi" },
+      { a: "Da ti masiram vrat dok radiš za računalom", b: "Da ti sjednem u krilo dok pokušavaš nešto pročitati" },
+      { a: "Da ti šapnem tajnu koju nikome nisam rekao/la", b: "Da večeras ostvarimo našu zajedničku tajnu želju" }
     ],
     hard: [
-      { a: "Biti čvrsto vezan/a kožnim lisicama za krevet cijelu noć", b: "Da ti mene vežeš i držiš mi oči povezane dok ti radim što želim" },
-      { a: "Imati seks pred velikim ogledalom u spavaćoj sobi", b: "Snimati naš cijeli seksi odnos kamerom izbliza" },
-      { a: "Igrati ulogu strogo dominantnog šefa i submisivne tajnice", b: "Igrati ulogu strogog trenera i poslušne sportašice" },
-      { a: "Da ti ja diktiram što ćeš točno odjenuti sljedećih tjedan dana", b: "Da ti meni diktiraš s kimmi je zabranjeno komunicirati" },
-      { a: "Da budem dominantan/na i grub/a prema tebi cijelu noć", b: "Da budem potpuno submisivan/na i da ti ispunjavam hira" },
-      { a: "Imati grubi seks na podu dnevne sobe bez ikakvih pravila", b: "Imati spori, izrazito perverzni i dugi seks s potpunom kontrolom" },
-      { a: "Da ti pljusnem po guzi svaki put kad prođeš pokraj mene", b: "Da mi grizeš vrat dok ne ostane velika i vidljiva šljiva" },
-      { a: "Da te skinem golog/u i ostavim te u kutu sobe 10 minuta bez dodira", b: "Da me staviš u pozu u kojoj se ne mogu micati dok me gledaš" },
-      { a: "Da ti čistim intimne dijelove isključivo svojim jezikom", b: "Da mi guraš prste u usta nakon što si me dirao/la" },
-      { a: "Upotrijebiti vibrator na tebi dok ti sjedim na licu", b: "Dopustiti mi da te vežem u neudobnu pozu na 15 minuta" },
-      { a: "Imati seks na balkonu dok nam susjedi mogu vidjeti siluete", b: "Imati seks u mračnom haustoru ispred tuđih vrata" },
-      { a: "Da mi priznaš sve svoje najmračnije seksualne maštarije", b: "Da mi priznaš tko ti je bio najprivlačniji na ulici danas" },
-      { a: "Da te diram samo s ledom po tvojim najosjetljivijim dijelovima", b: "Da mi kapaš vreli vosak po unutarnjoj strani bedara" },
-      { a: "Da mi vežeš ruke i radiš sa mnom što god poželiš bez pitanja", b: "Da ja tebe vezanog/nu izludim do ruba suza i ne dam ti da svršiš" },
-      { a: "Da vodimo ljubav u potpunoj tišini dok nam se pogledi ne odvoje", b: "Da vrištimo jedno na drugo i psujemo dok vodimo ljubav" },
-      { a: "Da ti stavim povez na oči i dovedem te u nepoznatu prostoriju", b: "Da mi vežeš ruke iznad glave i preuzmeš potpunu kontrolu" },
-      { a: "Da ti ljubim stopala jezikom dok klečiš preda mnom", b: "Da mi ližеш cipele dok te ja držim za kosu" },
-      { a: "Da ti gurnem dva prsta duboko u usta dok te ljubim", b: "Da me držiš za vrat s dvije ruke dok vodimo ljubav" },
-      { a: "Da imamo seks dok ti zvoni budilica i moraš šutjeti", b: "Da imamo seks u autu dok je vani dan i ljudi prolaze" },
-      { a: "Da te prisilim da svršiš samo pomoću ruku, bez penetracije", b: "Da te primim za kosu i natjeram te na duboki oralni seks" },
-      { a: "Da ti zavežem noge za tvoje rameni pojas", b: "Da mi digneš noge visoko u zrak i držiš me čvrsto" },
-      { a: "Da ti stavim povez na oči i radim stvari s ledom i perjem", b: "Da me udaraš remenom po stražnjici dok ne pocrvenim" },
-      { a: "Da mi priznaš je li ti ikada bilo dosadno tijekom našeg seksa", b: "Da mi priznaš s kim si iz društva htio/la završiti u krevetu" },
-      { a: "Da ti vežem ruke za krevet i odem iz sobe na 5 minuta", b: "Da me ostaviš golog/u zavezanog/nu na hladnom podu" },
-      { a: "Da te izludim s predigrom od sat vremena bez samog čina", b: "Da skočim na tebe i imamo divlji seks bez ikakve predigre" },
-      { a: "Da ti nanosim blagu bol čupanjem i grebanjem po leđima", b: "Da mi ližeš svaku kap znoja s tijela nakon treninga" },
-      { a: "Imati grubi analni seks s lubrikantom", b: "Imati dugi i strastveni oralni seks s gutanjem" },
-      { a: "Da ti vežem ruke i pokrijem te dekom dok se ja zadovoljavam", b: "Da me držiš čvrsto za struk dok te ja jaham bez prestanka" },
-      { a: "Da ti naredim da klečiš pokraj kreveta dok ti se obraćam s 'gospodaru/ice'", b: "Da mi skineš svu odjeću zubima i bacaš me po krevetu" },
-      { a: "Da te vežem za stolicu i radim što god poželim s tvojim tijelom", b: "Da mi vežeš ruke za leđa i kontroliraš svaki moj uzdah" },
-      { a: "Da ti stavim štipaljke na bradavice na 5 minuta", b: "Da mi staviš povez na oči i pogađaš čime te dodirujem" },
-      { a: "Da vodimo ljubav s upaljenom kamerom koja nas snima", b: "Da imamo seks na podu dok nam netko spava u susjednoj sobi" },
-      { a: "Da te primim za kosu i povučem glavu unatrag tijekom seksa", b: "Da mi pljuneš u usta dok se strastveno ljubimo" },
-      { a: "Da ti vežem ruke, a ti meni povežeš oči", b: "Da zamijenimo uloge i da ti meni radiš sve što ja tebi" },
-      { a: "Da ti ljubim svaku ogrebotinu i modricu koju sam ti napravio/la", b: "Da mi napraviš pet novih modrica na skrivenim mjestima" },
-      { a: "Da ti stavim prsten na tvoj najosjetljiviji dio tijela", b: "Da mi vežeš noge široko raširene trakom za krevet" },
-      { a: "Da ti priznam najperverzniju misao koju sam imala o tvom prijatelju/ici", b: "Da mi priznaš jesi li ikada masturbirao/la na tuđu sliku" },
-      { a: "Da ti vežem ruke i diram te isključivo vibratorom", b: "Da mi držiš ruke iznad glave dok te ja pljuskam po licu" },
-      { a: "Da ti zavežem oči i radim ti nepoznate stvari po tijelu", b: "Da mi narediš da skidam komad po komad odjeće na hladnom" },
-      { a: "Da provedemo cijelu noć u pozama koje nas bole idući dan", b: "Da imamo seks na kiši vani ispred kuće" },
-      { a: "Da ti stavim povez na oči i nahranim te voćem sa svog tijela", b: "Da mi ližeš intimne dijelove nakon žestokog sramoćenja" },
-      { a: "Da ti vežem ruke i noge istovremeno u čvor", b: "Da me držiš čvrsto pritisnutog/nu uza zid dok te molim za milost" },
-      { a: "Da ti nanesem par udaraca po stražnjici kožnim remenom", b: "Da mi grebeš prsa noktima dok ne potekne malo krvi" },
-      { a: "Da ti naredim da šutiš i ne mičeš se dok te ja palim", b: "Da mi narediš da vrištim tvoje ime dok svršavam" },
-      { a: "Da ti zavežem usta maramom da ne možeš vikati", b: "Da mi vežeš ruke i stavš mi lopticu u usta (gag)" },
-      { a: "Da vodimo ljubav s povezom na očima u potpunoj tišini", b: "Da imamo seks na visokom krovu zgrade noću" },
-      { a: "Da ti radim oralni seks dok ti jecaš od uzbuđenja", b: "Da mi svršavaš po licu i tijelu bez skrivanja" },
-      { a: "Da ti vežem ruke i ostavim te da se mučiš željeznom voljom", b: "Da me natjeraš da pužem po podu i molim te za dodir" },
-      { a: "Da ti nanosim bol iglicama ili čupanjem dlaka", b: "Da mi guraš prste u usta i uši dok vodimo ljubav" },
-      { a: "Da ti vežem ruke i radim s tobom apsolutno sve što mi padne na pamet", b: "Da ja tebe zavežem i da ti ja vodim cijelu igru bez tvojih prigovora" }
+      { a: "Biti vezan/a kožnim lisicama za uzglavlje kreveta", b: "Da ti mene zavežeš i držiš mi povez preko očiju" },
+      { a: "Imati grubi seks uza zid u hodniku", b: "Imati dugi, iscrpljujući seks na podu dnevne sobe" },
+      { a: "Da ti diktiram točno kada smiješ doživjeti orgazam", b: "Da te dovedem do samog ruba tri puta i svaki put stanem" },
+      { a: "Upotrijebiti vibrator na tebi dok ti sjedim na licu", b: "Da se ti zadovoljavaš preda mnom dok te ja samo gledam i naređujem" },
+      { a: "Da te pljusnem po stražnjici svaki put kad napraviš pogrešku", b: "Da mi ostaviš vidljive tragove ugriza po vratu i ramenima" },
+      { a: "Igrati ulogu strogog profesora i neposlušne studentice", b: "Igrati ulogu dominantnog šefa i pokorne tajnice" },
+      { a: "Snimati naš najstrastveniji odnos mobitelom izbliza", b: "Gledati se u velikom ogledalu dok vodimo ljubav u doggy pozi" },
+      { a: "Da te skinem do gola i ostavim te klečati 5 minuta bez dodira", b: "Da te stavim u pozu u kojoj se ne možeš pomaknuti dok te zadirkujem" },
+      { a: "Kapati topli vosak svijeće po tvojim prsima i trbuhu", b: "Trljati kockicu leda po tvojim genitalijama dok ne počneš drhtati" },
+      { a: "Da te čvrsto držim za vrat jednom rukom tijekom odnosa", b: "Da te vučem za kosu unatrag dok te uzimam s leđa" },
+      { a: "Imati seks na balkonu gdje nas susjedi lako mogu čuti", b: "Imati seks u autu na parkiralištu dok ljudi prolaze pokraj nas" },
+      { a: "Da ti vežem ruke na leđa kravatom i radim što god poželim", b: "Da preuzmeš potpunu dominaciju i narediš mi svaku pozu" },
+      { a: "Pružiti mi dugi oralni seks dok klečiš na podu", b: "Da ti sjednem na lice i ne pustim te dok ne ostanem bez daha" },
+      { a: "Da te udaram po stražnjici kožnim remenom (umjereno)", b: "Da mi grebeš leđa i prsa noktima dok ne ostanu crvene crte" },
+      { a: "Nositi daljinski upravljani vibrator u restoranu dok ja držim upravljač", b: "Ići na piće bez donjeg rublja i dopustiti mi da te diram ispod stola" },
+      { a: "Da ti zavežem usta svilenom maramom da prigušim uzdahe", b: "Da te natjeram da vrištiš moje ime na sav glas" },
+      { a: "Imati seks u sobi dok netko spava u susjednoj prostoriji", b: "Imati brzi seks u javnom WC-u noćnog kluba" },
+      { a: "Da ti ližem stopala i prste dok me gledaš u oči", b: "Da ti gurnem dva prsta duboko u usta dok te ljubim" },
+      { a: "Da provedemo cijelu noć bez spavanja isprobavajući sve poze", b: "Da imamo tri runde grubog seksa zaredom bez minute odmora" },
+      { a: "Da ti skinem donje rublje zubima bez korištenja ruku", b: "Da rastrgam tvoje donje rublje u naletu sirove strasti" },
+      { a: "Da ti naredim da mi se obraćaš s 'Gospodaru/Gospodarice' cijelu večer", b: "Da ti budem potpuno pokoran/na i ispunjavam svaki tvoj hir" },
+      { a: "Da te izludim perjem i ledom dok si vezan/a za stolicu", b: "Da te ostavim golog/u i vezanog/u na krevetu i izađem iz sobe na 10 minuta" },
+      { a: "Imati grubi seks bez ikakve predigre", b: "Imati predigru od sat vremena u kojoj ti ne dam da me penetriraš" },
+      { a: "Da te držim za ruke iznad glave i ne dam ti da me dodirneš", b: "Da ti zavežem noge široko raširene za rubove kreveta" },
+      { a: "Da ti priznam svoju najmračniju seksualnu fantaziju", b: "Da večeras odmah odglumimo tvoju najprljaviju maštariju" },
+      { a: "Da ti stavim štipaljke na bradavice na nekoliko minuta", b: "Da ti čvrsto stišćem i grickam bradavice tijekom odnosa" },
+      { a: "Da te zadovoljim oralno do samog kraja bez prestanka", b: "Da me zadovoljiš rukama dok te gledam ravno u oči" },
+      { a: "Imati seks pod hladnim tušem", b: "Imati seks na podu kupaonice dok curi vruća voda" },
+      { a: "Da te prisilim da svršiš dok ti držim ruku preko usta", b: "Da te kaznim blagim udarcem svaki put kad ispustiš zvuk" },
+      { a: "Da te jašem okrenut/a leđima dok me udaraš po stražnjici", b: "Da me držiš u zraku pritisnutog/u uza zid dok vodimo ljubav" },
+      { a: "Da ti ližem unutarnju stranu bedara pola sata", b: "Da mi guraš prste u usta nakon što si me dirao/la dolje" },
+      { a: "Da te vežem u neudobnu pozu i zadirkujem te igračkom", b: "Da ti stavim povez na oči i pogađaš čime te dodirujem po tijelu" },
+      { a: "Imati seks dok nam zvoni mobitel i moraš se javiti i pričati normalno", b: "Imati seks na balkonu dok pada kiša" },
+      { a: "Da te ostavim na rubu orgazma i odem pod tuš", b: "Da te natjeram da svršiš dva puta u deset minuta" },
+      { a: "Da ti pišem prljave riječi flomasterom po golom tijelu", b: "Da poližem šlag i čokoladu s tvojih najintimnijih dijelova" },
+      { a: "Da me probudiš usred noći grubim seksom", b: "Da me zaskočiš čim uđem u stan s posla i baciš me na pod" },
+      { a: "Da ti vežem ruke ispred tijela i vodim te po stanu na povodcu", b: "Da klečiš pokraj mog stolca dok ja gledam TV i mazim te po glavi" },
+      { a: "Da isprobamo analnu igračku tijekom predigre", b: "Da isprobamo dvostruku stimulaciju vibratorom" },
+      { a: "Da te držim za bokove i nabijam najjačim mogućim tempom", b: "Da vodimo ljubav izuzetno sporo i duboko do potpunog iscrpljenja" },
+      { a: "Da mi pljuneš u usta tijekom strastvenog poljupca", b: "Da mi poližeš znoj s vrata i prsa" },
+      { a: "Da te kaznim s deset jakih udaraca dlanom po guzi", b: "Da te zavežem za stolicu i plešem ti u krilu bez dodira" },
+      { a: "Imati seks u tuđem krevetu dok smo u gostima", b: "Imati seks na stražnjem sjedalu auta na osamljenom vidikovcu" },
+      { a: "Da ti stavim povez na oči i pustim te da me tražiš po sobi", b: "Da ti zavežem ruke i noge u obliku zvijezde na krevetu" },
+      { a: "Da te zadovoljavam dok si na telefonu s prijateljem/prijateljicom", b: "Da mi šalješ slike svog međunožja dok si u javnom prijevozu" },
+      { a: "Da te grizem po unutarnjoj strani bedara dok ne ostavim tragove", b: "Da ti sisam vrat dok ne ostane velika ljubičasta šljiva" },
+      { a: "Da se obučem u kožu i lateks i preuzmem komandu", b: "Da te skinem do gola i natjeram te da me služiš cijelu večer" },
+      { a: "Da ti gurnem prste duboko u sebe dok te gledam u oči", b: "Da me zadovoljavaš jezikom dok te čvrsto držim za kosu" },
+      { a: "Da te vežem remenom za krevet", b: "Da ti stavim lisice na ruke i noge" },
+      { a: "Imati seks na kuhinjskom pultu uz upaljeno svjetlo", b: "Imati seks na stepenicama u zgradi kasno noću" },
+      { a: "Da ti kažem najprljaviju stvar koju sam ikad pomislio/la o tebi", b: "Da te pitam da mi opišeš svoj najluđi seksualni san u detalje" },
+      { a: "Da te izludim kružnim pokretima jezika po najosjetljivijoj točki", b: "Da te pritisnem o madrac svom svojom težinom dok vodimo ljubav" },
+      { a: "Da ti stavim lopticu u usta (gag) na pet minuta", b: "Da ti vežem ruke iza leđa i stavim povez na oči" },
+      { a: "Da te natjeram da moliš za dopuštenje prije nego što svršiš", b: "Da ti zabranim da me dodiruješ rukama cijelu noć" },
+      { a: "Imati seks u prirodi skriveni iza drveća", b: "Imati seks u praznom vagonu noćnog vlaka" },
+      { a: "Da te masiram po stražnjici i unutarnjim bedrima s puno ulja", b: "Da ti trljam prepone kockicom leda dok si vezan/a" },
+      { a: "Da te podignem u zrak i prislonim uza zid tijekom odnosa", b: "Da te savijem preko ruba stola i uzmem s leđa" },
+      { a: "Da ti ostavim tragove zuba na stražnjici", b: "Da te povučem za kosu i prisilim na duboki poljubac" },
+      { a: "Da gledamo pornić zajedno i oponašamo sve što rade", b: "Da snimimo vlastiti video za osobnu arhivu" },
+      { a: "Da ti zavežem ruke i koristim vibrator na najjačoj brzini", b: "Da te zadovoljavam isključivo prstima dok ne izgubiš snagu" },
+      { a: "Da te skinem na silu (u igri) i bacim na krevet", b: "Da ti naredim da se skidaš jako sporo dok te ocjenjujem" },
+      { a: "Da ti ližem trbuh i prepone dok ležiš svezan/a", b: "Da ti sjednem na prsa i natjeram te da me gledaš" },
+      { a: "Imati grubi seks koji traje više od sat vremena", b: "Imati tri brza i žestoka seksa u različitim prostorijama stana" },
+      { a: "Da ti stavim povez na oči i iznenadim te oralnim seksom", b: "Da te probudim iz sna rukom u tvom donjem rublju" },
+      { a: "Da ti naredim da klečiš ispred mene dok sjedim na rubu kreveta", b: "Da ležiš na trbuhu svezanih ruku dok te ja mazim bičem" },
+      { a: "Da ti šapćem najprostije riječi ravno u uho", b: "Da ti stavim ruku na usta dok stenješ" },
+      { a: "Da ti otkopčam hlače i zadovoljim te u autu na parkingu", b: "Da se iskrademo s obiteljskog okupljanja na brzi seks u kupaonici" },
+      { a: "Da ti grizem ključnu kost i ramena tijekom vrhunca", b: "Da ti zabijem nokte u leđa kad doživim orgazam" },
+      { a: "Da te zavežem u pozu u kojoj si potpuno izložen/a", b: "Da ti stavim povez na oči i slušalice s glasnom glazbom na uši" },
+      { a: "Da ti priznam s kim sam te zamislio/la u trojcu", b: "Da odigramo fantaziju u kojoj sam ja potpuni stranac" },
+      { a: "Da te mučim poljupcima po cijelom tijelu izbjegavajući genitalije", b: "Da odmah prijeđemo na najgrublji mogući seks" },
+      { a: "Da ti vežem ruke iznad glave i koristim pero i led", b: "Da te pljuskam po stražnjici dok ne pocrveni" },
+      { a: "Da te natjeram da puziš po krevetu do mene", b: "Da te zgrabim za gležnjeve i povučem k sebi na rub kreveta" },
+      { a: "Da ti pružim oralni seks dok stojiš uza zid", b: "Da me držiš za glavu dok te zadovoljavam usnama" },
+      { a: "Da provedemo cijelu večer igrajući se dominacije i pokornosti", b: "Da večeras zamijenimo uloge i ti budeš glavni/a u krevetu" },
+      { a: "Da te ostavim vezanog/u na krevetu i zadirkujem te iz daljine", b: "Da te odmah zajašim i ne pustim dok oboje ne svršimo" }
     ],
     extreme: [
       { a: "Imati otvorenu vezu u kojoj možemo spavati s drugim ljudima po dogovoru", b: "Imati trojac s drugom osobom po tvom izboru" },
@@ -1043,26 +1193,102 @@ export default function App() {
 
   const TodGame = () => {
     if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
-    const [currentText, setCurrentText] = useState("Odaberi Istinu ili Izazov!");
-    const roll = (type) => {
-      const p = getRandomPlayer();
+    const [selectedPlayer, setSelectedPlayer] = useState(null);
+    const [isSpinning, setIsSpinning] = useState(false);
+    const [rotation, setRotation] = useState(0);
+    const [currentText, setCurrentText] = useState(null);
+
+    const spinWheel = () => {
+      if (isSpinning) return;
+      setIsSpinning(true);
+      setCurrentText(null);
+      setSelectedPlayer(null);
+
+      // Izvlači igrača (0 = igrač 1, 1 = igrač 2)
+      const winnerIdx = Math.random() > 0.5 ? 0 : 1;
+      const winnerName = winnerIdx === 0 ? players.p1 : players.p2;
+
+      // Kvadranti: p1 je na 0-90° i 180-270°, p2 na 90-180° i 270-360°
+      // Kazaljka je na vrhu (0°), pa ciljamo sredinu odgovarajućeg kvadranta (45° ili 135°)
+      const targetAngle = winnerIdx === 0 ? 315 : 225;
+      const extraSpins = (5 + Math.floor(Math.random() * 4)) * 360;
+      const currentMod = rotation % 360;
+      const finalRotation = rotation + extraSpins + ((targetAngle - currentMod + 360) % 360);
+
+      setRotation(finalRotation);
+
+      setTimeout(() => {
+        setIsSpinning(false);
+        setSelectedPlayer(winnerName);
+      }, 2550);
+    };
+
+    const rollChoice = (type) => {
       if (type === 'truth') {
         const text = popRand(db.tod[activeLevel].truths);
-        setCurrentText(text.includes("KRAJ!") ? text : `${p}, reci istinu:\n\n${text}`);
+        setCurrentText(text.includes("KRAJ!") ? text : `${selectedPlayer}, reci istinu:\n\n${text}`);
       } else {
         const text = popRand(db.tod[activeLevel].dares);
-        setCurrentText(text.includes("KRAJ!") ? text : `${p}, tvoj izazov:\n\n${text}`);
+        setCurrentText(text.includes("KRAJ!") ? text : `${selectedPlayer}, tvoj izazov:\n\n${text}`);
       }
     };
+
+    const nextTurn = () => {
+      setSelectedPlayer(null);
+      setCurrentText(null);
+    };
+
     return (
       <div className="app-container">
         <h2 className="subtitle" style={{ color: '#ec4899' }}>Istina ili Izazov</h2>
-        <div className="game-box"><p style={{ whiteSpace: 'pre-line' }}>{currentText}</p></div>
-        <div className="btn-row">
-          <button onClick={() => roll('truth')} className="btn-half bg-truth">ISTINA</button>
-          <button onClick={() => roll('dare')} className="btn-half bg-dare">IZAZOV</button>
-        </div>
-        <button onClick={() => setActiveLevel(null)} className="back-btn"><ArrowLeft size={20}/> Promijeni razinu</button>
+
+        {/* FAZA 1: Vrtnja kola */}
+        {!selectedPlayer && (
+          <>
+            <div className="wheel-wrapper">
+              <div className="wheel-pointer" />
+              <div className="wheel-circle" style={{ transform: `rotate(${rotation}deg)` }}>
+                <span className="wheel-label w-q1">{players.p1}</span>
+                <span className="wheel-label w-q2">{players.p2}</span>
+                <span className="wheel-label w-q3">{players.p1}</span>
+                <span className="wheel-label w-q4">{players.p2}</span>
+                <div className="wheel-center">
+                  <Heart size={22} color="#ec4899" fill="#ec4899" />
+                </div>
+              </div>
+            </div>
+            <button onClick={spinWheel} disabled={isSpinning} className="btn-main bg-wyr">
+              {isSpinning ? "VRTI SE..." : "ZAVRTI KOLO"}
+            </button>
+          </>
+        )}
+
+        {/* FAZA 2: Odabrani igrač bira Istinu ili Izazov */}
+        {selectedPlayer && !currentText && (
+          <>
+            <div className="game-box" style={{ flexDirection: 'column', gap: '15px', borderColor: '#ec4899' }}>
+              <span style={{ fontSize: '1.1rem', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '1px' }}>Na potezu je:</span>
+              <span style={{ fontSize: '2.5rem', fontWeight: '800', color: '#ec4899' }}>{selectedPlayer}</span>
+              <span style={{ fontSize: '1.1rem', color: 'white' }}>Što biraš?</span>
+            </div>
+            <div className="btn-row">
+              <button onClick={() => rollChoice('truth')} className="btn-half bg-truth">ISTINA</button>
+              <button onClick={() => rollChoice('dare')} className="btn-half bg-dare">IZAZOV</button>
+            </div>
+          </>
+        )}
+
+        {/* FAZA 3: Prikaz zadatka i prelazak na sljedećeg */}
+        {selectedPlayer && currentText && (
+          <>
+            <div className="game-box"><p style={{ whiteSpace: 'pre-line' }}>{currentText}</p></div>
+            <button onClick={nextTurn} className="btn-main bg-wyr">SLJEDEĆI IGRAČ</button>
+          </>
+        )}
+
+        <button onClick={() => { setActiveLevel(null); nextTurn(); }} className="back-btn">
+          <ArrowLeft size={20} /> Promijeni razinu
+        </button>
       </div>
     );
   };
@@ -1190,29 +1416,45 @@ export default function App() {
 
   const DiceGame = () => {
     if (!activeLevel) return <LevelSelector onSelect={setActiveLevel} />;
+    const [activeDicePlayer, setActiveDicePlayer] = useState("");
     const [dice, setDice] = useState({ action: "Zavrti", part: "Kockice!" });
+
     const rollDice = () => {
       let rollCount = 0;
+      const chosenPlayer = getRandomPlayer();
+      setActiveDicePlayer("Bira se igrač...");
+
       const interval = setInterval(() => {
         setDice({ 
           action: keepRand(db.dice[activeLevel].actions), 
           part: keepRand(db.dice[activeLevel].parts) 
         });
         rollCount++;
-        if (rollCount > 10) clearInterval(interval);
+        if (rollCount > 10) {
+          clearInterval(interval);
+          setActiveDicePlayer(chosenPlayer);
+        }
       }, 50);
     };
+
     return (
       <div className="app-container">
         <h2 className="subtitle" style={{ color: '#eab308' }}>Kockice</h2>
+        {activeDicePlayer && (
+          <p style={{ color: '#eab308', fontWeight: '800', fontSize: '1.4rem', marginBottom: '20px', textTransform: 'uppercase' }}>
+            {activeDicePlayer === "Bira se igrač..." ? activeDicePlayer : `Izvršava: ${activeDicePlayer}`}
+          </p>
+        )}
         <div className="btn-row" style={{ marginBottom: '30px' }}>
-          <div className="game-box" style={{ flex: 1, minHeight: '150px', marginBottom: 0, padding: '10px' }}><p>{dice.action}</p></div>
-          <div className="game-box" style={{ flex: 1, minHeight: '150px', marginBottom: 0, padding: '10px' }}><p>{dice.part}</p></div>
+          <div className="game-box" style={{ flex: 1, minHeight: '150px', marginBottom: 0, padding: '10px', borderColor: '#eab308' }}><p>{dice.action}</p></div>
+          <div className="game-box" style={{ flex: 1, minHeight: '150px', marginBottom: 0, padding: '10px', borderColor: '#eab308' }}><p>{dice.part}</p></div>
         </div>
         <button onClick={rollDice} className="btn-main bg-dice" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
           <Dice5 size={28} /> BACI KOCKICE
         </button>
-        <button onClick={() => setActiveLevel(null)} className="back-btn"><ArrowLeft size={20}/> Promijeni razinu</button>
+        <button onClick={() => { setActiveLevel(null); setActiveDicePlayer(""); }} className="back-btn">
+          <ArrowLeft size={20}/> Promijeni razinu
+        </button>
       </div>
     );
   };

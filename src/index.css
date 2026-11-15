@@ -207,3 +207,76 @@ body {
   text-align: center;
   line-height: 1.2;
 }
+/* Spin the wheel (Kolo sreće za parove) */
+.wheel-wrapper {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 10px auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 26px solid #facc15;
+  z-index: 10;
+  filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.9));
+}
+
+.wheel-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  background: conic-gradient(
+    #ec4899 0deg 90deg,
+    #3b82f6 90deg 180deg,
+    #ec4899 180deg 270deg,
+    #3b82f6 270deg 360deg
+  );
+  box-shadow: 0 0 35px rgba(236, 72, 153, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: transform 2.5s cubic-bezier(0.15, 0.85, 0.25, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel-center {
+  width: 54px;
+  height: 54px;
+  background: #0f172a;
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.wheel-label {
+  position: absolute;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  max-width: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.w-q1 { top: 24%; right: 16%; transform: rotate(45deg); }
+.w-q2 { bottom: 24%; right: 16%; transform: rotate(135deg); }
+.w-q3 { bottom: 24%; left: 16%; transform: rotate(225deg); }
+.w-q4 { top: 24%; left: 16%; transform: rotate(315deg); }
