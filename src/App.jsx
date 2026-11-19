@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Flame, Zap, Eye, Dice5, Layers, ArrowLeft, Timer, Users } from 'lucide-react';
+import { Heart, Flame, Zap, Eye, Dice5, Layers, ArrowLeft, Timer, Users, Ticket, HelpCircle } from 'lucide-react';
 
 const LEVELS = {
   soft: { id: 'soft', name: 'Soft', desc: 'Lagani izazovi za zagrijavanje.', style: 'neon-pink' },
@@ -1347,6 +1347,201 @@ const guessWords = {
   ]
 };
 
+const scratchCards = {  
+  scratchCards: [
+    "Kupon za 15 minuta opuštajuće masaže cijelih leđa bez ikakvog prigovora.",
+    "Kupon za doručak u krevet po tvom izboru sutra ujutro.",
+    "Kupon za odabir filma ili serije večeras bez prava na veto.",
+    "Kupon za oslobađanje od jednog kućanskog posla po tvom izboru.",
+    "Kupon za večeru u restoranu ili narudžbu hrane koju ti odabereš.",
+    "Kupon za 10 minuta nježnog maženja po kosi i glavi.",
+    "Kupon za jednu želju u krevetu koju partner mora odmah ispuniti.",
+    "Kupon za kontrolu nad glazbom u autu na cijelom sljedećem putovanju.",
+    "Kupon za 20 minuta masaže stopala nakon napornog dana.",
+    "Kupon za jedan strastveni poljubac u trajanju od pune dvije minute.",
+    "Kupon za spavanje duže ujutro dok partner preuzima sve jutarnje obaveze.",
+    "Kupon za besplatno pranje i sušenje suđa večeras.",
+    "Kupon za jednu erotsku masažu toplim uljem večeras.",
+    "Kupon za odabir poze večeras bez ikakve rasprave.",
+    "Kupon za slatko iznenađenje ili omiljeni desert dostavljen ravno u ruke.",
+    "Kupon za pravo na jedan 'Joker preskok' bilo kojeg zadatka u igrama večeras.",
+    "Kupon za zajedničku toplu kupku ili tuširanje uz pranje leđa.",
+    "Kupon za 30 minuta apsolutne tišine i mira kada god to zatražiš.",
+    "Kupon za jedan striptiz ili zavodljivi ples u krilu po tvojoj želji.",
+    "Kupon za kavu ili čaj poslužen u krevet čim otvoriš oči.",
+    "Kupon za biranje aktivnosti za naš sljedeći zajednički vikend.",
+    "Kupon za pet minuta intenzivnog ljubljenja po vratu i ključnoj kosti.",
+    "Kupon za sladoled ili omiljenu grickalicu u bilo koje doba dana ili noći.",
+    "Kupon za jednu partiju društvene igre po tvom izboru.",
+    "Kupon za potpuno prepuštanje kontrole partneru na pola sata.",
+    "Kupon za nošenje partnerove omiljene majice ili hudice cijeli vikend.",
+    "Kupon za jednu rundu oralnog zadovoljstva bez ikakvih uvjeta.",
+    "Kupon za zajedničku šetnju na mjesto koje ti odabereš.",
+    "Kupon za odgodu jedne obaveze koju ti se danas nikako ne da raditi.",
+    "Kupon za deset strastvenih poljubaca po tijelu na mjesta po tvom izboru.",
+    "Kupon za večernju rutinu bez mobitela – samo nas dvoje i razgovor.",
+    "Kupon za jednu tajnu fantaziju koju ćemo ostvariti ovaj tjedan.",
+    "Kupon za besplatno točenje goriva ili vožnju kamo god želiš.",
+    "Kupon za 15 minuta češkanja po leđima prije spavanja.",
+    "Kupon za odabir odjeće koju će partner nositi na našem sljedećem spoju.",
+    "Kupon za jednu kaznu po tvom izboru koju partner mora odraditi odmah.",
+    "Kupon za čašu omiljenog pića posluženu s ledom i osmijehom.",
+    "Kupon za jutarnje buđenje poljupcima umjesto budilice.",
+    "Kupon za jedan cijeli dan u kojem partner govori isključivo 'Da, ljubavi'.",
+    "Kupon za fotografiranje zajedničkog selfieja bez prigovora.",
+    "Kupon za 10 minuta igranja s vezanim očima i iznenađenjima.",
+    "Kupon za biranje glazbene playliste za večerašnju atmosferu.",
+    "Kupon za jedno oslobađanje od kuhanja ručka ili večere.",
+    "Kupon za duboki, čvrsti zagrljaj koji traje najmanje dvije minute.",
+    "Kupon za jednu provokativnu sliku poslanu na mobitel tijekom dana.",
+    "Kupon za zajedničko gledanje zalaska sunca s omiljenim pićem.",
+    "Kupon za 20 minuta maženja u krevetu prije ustajanja.",
+    "Kupon za pravo da preusmjeriš bilo koji izazov iz igre na partnera.",
+    "Kupon za jednu novu pozu iz Kama Sutre koju ćemo isprobati večeras.",
+    "Kupon za masažu ruku, dlanova i ramena u trajanju od 10 minuta.",
+    "Kupon za naručivanje pizze ili burgera kasno navečer.",
+    "Kupon za jedan strastveni 'quickie' na mjestu po tvom izboru.",
+    "Kupon za pospremanje sobe ili kreveta umjesto tebe.",
+    "Kupon za jednu večer posvećenu isključivo tvom užitku u krevetu.",
+    "Kupon za poljubac na kiši ili pod zvijezdama.",
+    "Kupon za odabir deserta koji će partner morati ispeći ili kupiti.",
+    "Kupon za 15 minuta igranja s kockicama leda po cijelom tijelu.",
+    "Kupon za pravo da odabereš donje rublje koje će partner obući večeras.",
+    "Kupon za jedno iskreno priznanje ili odgovor na bilo koje pitanje.",
+    "Kupon za zajednički odlazak u kino na film po tvom izboru.",
+    "Kupon za masažu vrata dok radiš ili gledaš televiziju.",
+    "Kupon za jednu rundu dominacije u kojoj ti postavljaš sva pravila.",
+    "Kupon za topli obrok koji te čeka čim dođeš kući s posla ili faksa.",
+    "Kupon za pet minuta šaptanja najljepših komplimenata na uho.",
+    "Kupon za jedan piknik u prirodi ili na podu dnevne sobe.",
+    "Kupon za oslobađanje od ustajanja iz kreveta po čašu vode.",
+    "Kupon za jednu senzualnu igru s povezom na očima.",
+    "Kupon za biranje kafića ili bara za naš sljedeći izlazak.",
+    "Kupon za deset minuta ljubljenja bez upotrebe ruku.",
+    "Kupon za jednu uslugu po tvom izboru koju ne smijem odbiti.",
+    "Kupon za zajedničko pečenje palačinki u kasne noćne sate.",
+    "Kupon za 15 minuta masaže lica i tjemena.",
+    "Kupon za jednu noć u kojoj ti određuješ tempo i trajanje svega.",
+    "Kupon za kupovinu jedne sitnice koja ti se već dugo sviđa.",
+    "Kupon za pravo na pobjedu u sljedećoj partiji bilo koje igre.",
+    "Kupon za jedan spori, romantični ples u dnevnoj sobi.",
+    "Kupon za buđenje uz oralni seks ili strastveno maženje.",
+    "Kupon za biranje društva ili aktivnosti za petak navečer.",
+    "Kupon za 10 minuta zadirkivanja poljupcima po cijelom trbuhu.",
+    "Kupon za jedno ručno pisano ljubavno pismo ili poruku.",
+    "Kupon za oslobađanje od iznošenja smeća sljedećih tjedan dana.",
+    "Kupon za jednu partiju pokera ili karata na skidanje.",
+    "Kupon za topli zagrljaj s leđa dok kuhaš ili nešto radiš.",
+    "Kupon za odabir teme razgovora bez prekidanja i gledanja u mobitel.",
+    "Kupon za 20 minuta potpunog opuštanja dok partner sve obavlja.",
+    "Kupon za jednu perverznu poruku tijekom radnog vremena.",
+    "Kupon za zajedničko gledanje starih slika i prisjećanje uspomena.",
+    "Kupon za jedan poljubac u svaki dio lica prije spavanja.",
+    "Kupon za pravo da zatražiš 'još jednu rundu' kada god poželiš.",
+    "Kupon za pripremu tople kupke sa svijećama i glazbom.",
+    "Kupon za oslobađanje od jednog odlaska u trgovinu.",
+    "Kupon za jednu igru uloga (roleplay) po tvom scenariju.",
+    "Kupon za 10 minuta igranja s kosom i nježnih dodira po licu.",
+    "Kupon za odabir mjesta za naš sljedeći jednodnevni izlet.",
+    "Kupon za jednu tajnu želju koju moraš samo šapnuti i bit će ispunjena.",
+    "Kupon za doručak, ručak ili večeru posluženu s maksimalnom pažnjom.",
+    "Kupon za jedan strastveni zagrljaj koji briše sav stres dana.",
+    "Kupon za pravo da večeras ti budeš 'šef/ica' u spavaćoj sobi.",
+    "Kupon za zajedničko promatranje zvijezda pod toplom dekom.",
+    "Kupon za jednu neograničenu želju po tvom izboru – vrijedi odmah!"
+  ],
+  knowMe: {
+    lagana: [
+      "Koja je moja apsolutno najdraža hrana?",
+      "Koje je moje omiljeno piće kada izađemo van?",
+      "Koja je moja najdraža boja?",
+      "Koje godišnje doba najviše volim?",
+      "Jesam li više jutarnji tip ili noćna ptica?",
+      "Koji je moj najdraži film ili serija svih vremena?",
+      "Što najradije naručujem kada jedemo brzu hranu?",
+      "Koja mi je najdraža slastica ili čokolada?",
+      "Volim li više more i plažu ili planine i prirodu?",
+      "Koji je moj omiljeni hobi ili aktivnost u slobodno vrijeme?",
+      "Koju vrstu glazbe najčešće slušam?",
+      "Koji je moj broj cipela?",
+      "Koja je moja omiljena životinja?",
+      "Pijem li kavu ili čaj, i kako ga točno pripremam?",
+      "Što me najbrže može nasmijati kada sam loše volje?",
+      "Koje jelo nikako ne volim i izbjegavam u širokom luku?",
+      "Koji je moj horoskopski znak?",
+      "Volim li više slatko ili slano?",
+      "Koji mi je najdraži dan u tjednu i zašto?",
+      "Što uvijek nosim sa sobom u torbi ili džepovima kad izlazim?"
+    ],
+    teza: [
+      "Koji je bio moj najdraži crtić ili igračka u djetinjstvu?",
+      "Čega se najviše bojim (moja najveća fobija)?",
+      "Koji je moj najveći skriveni talent za koji malo ljudi zna?",
+      "Koja mi je bila najdraža destinacija na kojoj sam ikada bio/la?",
+      "Što me kod drugih ljudi najbrže može izbaciti iz takta?",
+      "Koji mi je bio najdraži predmet u školi, a koji sam najviše mrzio/la?",
+      "Da mogu večerati s bilo kojom slavnom osobom, koga bih odabrao/la?",
+      "Koji je moj najveći ponos ili postignuće u životu do sada?",
+      "Što sam kao dijete želio/la postati kad odrastem?",
+      "Koja je moja najgora navika koje sam svjestan/na?",
+      "Koji je moj idealan način za rješavanje stresa nakon teškog dana?",
+      "Koju bih državu ili grad volio/la posjetiti prije kraja života?",
+      "Koji mi je bio prvi kućni ljubimac i kako se zvao?",
+      "Što najviše cijenim kod pravih prijatelja?",
+      "Koji je moj najdraži miris (osim parfema)?",
+      "Koja je najluđa ili najspontanija stvar koju sam ikada napravio/la?",
+      "Što radim kada mislim da me apsolutno nitko ne gleda?",
+      "Koja me pjesma uvijek pogodi u emocije?",
+      "Da dobijem na lotu, što bih prvo kupio/la sebi?",
+      "Koji mi je bio najneugodniji trenutak u životu kojeg se sjećam?"
+    ],
+    teska: [
+      "Koji je moj najveći neostvareni san ili životni cilj?",
+      "Što sam prvo točno pomislio/la o tebi kada smo se tek upoznali?",
+      "Koja je moja najveća nesigurnost o kojoj rijetko pričam?",
+      "Koji trenutak u životu me najviše promijenio kao osobu?",
+      "Što smatram svojom najvećom manom u karakteru?",
+      "Koji je bio točan trenutak kada sam shvatio/la da sam zaljubljen/a u tebe?",
+      "Čega se najviše bojim kada razmišljam o budućnosti?",
+      "Koji savjet bih dao/la mlađoj verziji sebe prije 10 godina?",
+      "Što mi je u životu važnije: apsolutna sigurnost ili potpuna sloboda?",
+      "Koja je najteža odluka koju sam ikada morao/la donijeti?",
+      "Što kod tebe najviše cijenim, a rijetko ti to kažem na glas?",
+      "Koji je moj najveći žal ili stvar koju bih volio/la da sam napravio/la drugačije?",
+      "Kako izgleda moj savršeni život za točno 10 godina?",
+      "Što mi je potrebno od tebe kada sam tužan/na ili pod velikim pritiskom?",
+      "Koji je moj glavni 'jezik ljubavi' (riječi, dodir, vrijeme, pokloni ili djela)?",
+      "Koju uspomenu iz našeg zajedničkog vremena čuvam kao najdražu?",
+      "Što me u vezi s tobom najviše iznenadilo nakon što smo prohodali?",
+      "Koja je jedina stvar koju nikada ne bih mogao/la oprostiti u vezi?",
+      "Što me čini istinski sretnim/om i ispunjenim/om u životu?",
+      "Da možeš promijeniti jednu stvar u mom životu da mi olakšaš, što misliš da bih odabrao/la?"
+    ],
+    ljubav: [
+      "Koji dio mog tijela najviše voliš dodirivati tijekom maženja?",
+      "Koja je moja najosjetljivija erogena zona na tijelu?",
+      "Koja je moja apsolutno najdraža poza u krevetu?",
+      "Što me najbrže i najsigurnije uzbudi tijekom predigre?",
+      "Koji je moj najveći 'turn-off' (ono što me odmah ohladi) u spavaćoj sobi?",
+      "Gdje izvan spavaće sobe najviše volim voditi ljubav s tobom?",
+      "Voliš li više kada sam u krevetu dominantan/na ili kada prepustim kontrolu tebi?",
+      "Koji komad donjeg rublja ili odjeće na meni smatraš najseksi?",
+      "Koliko mi je važna predigra i što mi u njoj najviše odgovara?",
+      "Koja je moja tajna seksualna fantazija o kojoj smo već pričali ili koju naslućuješ?",
+      "Što najviše volim kada mi šapneš na uho tijekom intimnih trenutaka?",
+      "Koji je bio naš najstrastveniji i najnezaboravniji intimni trenutak do sada?",
+      "Voliš li više jutarnji seks čim se probudimo ili kasni noćni?",
+      "Koji tvoj dodir ili poljubac na meni uvijek izazove trnce?",
+      "Što najviše volim da radimo odmah nakon što vodimo ljubav?",
+      "Postoji li neka igračka ili rekvizit koji znaš da bih volio/la isprobati?",
+      "Koji moj pogled ili izraz lica ti odmah daje do znanja da te želim?",
+      "Koje javno mjesto bi mi bilo najuzbudljivije za brzi, tajni poljubac ili dodir?",
+      "Što misliš da je moja najveća vrlina u krevetu?",
+      "Koji je moj idealan scenarij za savršenu romantičnu i strastvenu večer u dvoje?"
+    ]
+  }
+};
+
 /* --- NOVE LOGIKE ZA RANDOM (BLOKADA PONAVLJANJA) --- */
 const popRand = (arr) => {
   if (!arr || arr.length === 0) return "🔥 KRAJ! Sva pitanja su potrošena. Osvježi stranicu (F5) za ponovno učitavanje. 🔥";
@@ -1682,6 +1877,8 @@ export default function App() {
           <button onClick={() => setActiveGame('mostLikely')} className="card neon-cyan"><Users size={40} color="#06b6d4" /><span className="card-title">Tko će prije?</span></button>
           <button onClick={() => setActiveGame('fiveSeconds')} className="card neon-rose"><Timer size={40} color="#f43f5e" /><span className="card-title">5 Sekundi</span></button>
           <button onClick={() => setActiveGame('twister')} className="card neon-indigo"><Zap size={40} color="#6366f1" /><span className="card-title">Twister za dvoje</span></button>
+          <button onClick={() => setActiveGame('scratch')} className="card neon-amber"><Ticket size={40} color="#f59e0b" /><span className="card-title">Kuponi za Užitak</span></button>
+          <button onClick={() => setActiveGame('knowMe')} className="card neon-teal"><HelpCircle size={40} color="#14b8a6" /><span className="card-title">Koliko me poznaješ?</span></button>        
         </div>
 
         <button onClick={() => setIsSetup(false)} className="back-btn" style={{ marginTop: '30px' }}>Promijeni igrače</button>
@@ -1700,6 +1897,8 @@ export default function App() {
       case 'mostLikely': return <MostLikelyGame />;
       case 'fiveSeconds': return <FiveSecondsGame />;
       case 'twister': return <TwisterGame />;
+      case 'scratch': return <ScratchGame />;
+      case 'knowMe': return <KnowMeGame />;
       default: return null;
     }
   };
@@ -1856,6 +2055,166 @@ export default function App() {
 
         <button onClick={() => { setActiveLevel(null); resetTwister(); }} className="back-btn">
           <ArrowLeft size={20}/> Promijeni razinu
+        </button>
+      </div>
+    );
+  };
+
+  const ScratchGame = () => {
+    const [winner, setWinner] = useState("");
+    const [prize, setPrize] = useState("");
+    const [isRevealed, setIsRevealed] = useState(false);
+    const canvasRef = React.useRef(null);
+    const isDrawing = React.useRef(false);
+
+    const initCanvas = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+
+      // Srebrno-zlatni sloj za grebanje
+      const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      grad.addColorStop(0, '#475569');
+      grad.addColorStop(0.5, '#94a3b8');
+      grad.addColorStop(1, '#334155');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = 'bold 20px Outfit, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('OSTRUGAJ PRSTOM ZA NAGRADU', canvas.width / 2, canvas.height / 2);
+    };
+
+    const newCard = () => {
+      setIsRevealed(false);
+      setWinner(getRandomPlayer());
+      setPrize(popRand(db.scratchCards));
+      setTimeout(initCanvas, 50);
+    };
+
+    React.useEffect(() => {
+      newCard();
+    }, []);
+
+    const scratch = (e) => {
+      if (!isDrawing.current || isRevealed) return;
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const rect = canvas.getBoundingClientRect();
+
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(x, y, 26, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Provjera koliko je ostrugano
+      const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      let cleared = 0;
+      for (let i = 3; i < imgData.data.length; i += 32) {
+        if (imgData.data[i] === 0) cleared++;
+      }
+      if (cleared / (imgData.data.length / 32) > 0.45) {
+        setIsRevealed(true);
+      }
+    };
+
+    return (
+      <div className="app-container">
+        <h2 className="subtitle" style={{ color: '#f59e0b' }}>Kuponi za Užitak</h2>
+        {winner && (
+          <p style={{ color: '#f59e0b', fontWeight: '800', fontSize: '1.3rem', marginBottom: '20px', textTransform: 'uppercase' }}>
+            Kupon osvaja: {winner}
+          </p>
+        )}
+
+        <div className="scratch-container">
+          <p style={{ fontSize: '1.35rem', fontWeight: '700', color: '#fef3c7', lineHeight: '1.4', zIndex: 1 }}>
+            {prize}
+          </p>
+          <canvas
+            ref={canvasRef}
+            className="scratch-canvas"
+            style={{ opacity: isRevealed ? 0 : 1, pointerEvents: isRevealed ? 'none' : 'auto' }}
+            onMouseDown={() => { isDrawing.current = true; }}
+            onMouseUp={() => { isDrawing.current = false; }}
+            onMouseLeave={() => { isDrawing.current = false; }}
+            onMouseMove={scratch}
+            onTouchStart={() => { isDrawing.current = true; }}
+            onTouchEnd={() => { isDrawing.current = false; }}
+            onTouchMove={scratch}
+          />
+        </div>
+
+        <button onClick={newCard} className="btn-main bg-amber">NOVI KUPON</button>
+        <button onClick={() => setActiveGame(null)} className="back-btn">
+          <ArrowLeft size={20} /> Natrag na izbornik
+        </button>
+      </div>
+    );
+  };
+
+  const KnowMeGame = () => {
+    const [kmLevel, setKmLevel] = useState(null);
+    const [question, setQuestion] = useState("Pritisni gumb za prvo pitanje!");
+    const [pair, setPair] = useState(null);
+
+    const KM_LEVELS = [
+      { id: 'lagana', name: 'Lagana pitanja', desc: 'Osnovne stvari koje bi svatko trebao znati.', style: 'neon-emerald' },
+      { id: 'teza', name: 'Teža pitanja', desc: 'Nešto o čemu moraš malo razmisliti.', style: 'neon-blue' },
+      { id: 'teska', name: 'Teška pitanja', desc: 'Dublje stvari koje znaju samo oni koji stvarno slušaju.', style: 'neon-orange' },
+      { id: 'ljubav', name: 'Ljubav', desc: 'Intimnija pitanja o strasti, dodirima i željama.', style: 'neon-pink' }
+    ];
+
+    if (!kmLevel) {
+      return (
+        <div className="app-container">
+          <h2 className="subtitle" style={{ color: '#14b8a6' }}>Koliko me dobro poznaješ?</h2>
+          <div className="grid-menu">
+            {KM_LEVELS.map((lvl) => (
+              <button key={lvl.id} onClick={() => setKmLevel(lvl.id)} className={`card ${lvl.style}`}>
+                <span className="card-title">{lvl.name}</span>
+                <span className="card-desc">{lvl.desc}</span>
+              </button>
+            ))}
+          </div>
+          <button onClick={() => setActiveGame(null)} className="back-btn">
+            <ArrowLeft size={20} /> Natrag na izbornik
+          </button>
+        </div>
+      );
+    }
+
+    const nextQuestion = () => {
+      const { active, other } = getBothPlayers();
+      setPair({ guesser: active, subject: other });
+      setQuestion(popRand(db.knowMe[kmLevel]));
+    };
+
+    return (
+      <div className="app-container">
+        <h2 className="subtitle" style={{ color: '#14b8a6' }}>Koliko me poznaješ?</h2>
+        {pair && (
+          <p style={{ color: '#5eead4', fontWeight: '700', fontSize: '1.15rem', marginBottom: '20px' }}>
+            {pair.guesser} pogađa što bi {pair.subject} odgovorio/la:
+          </p>
+        )}
+        <div className="game-box" style={{ borderColor: '#14b8a6' }}>
+          <p>{question}</p>
+        </div>
+        <button onClick={nextQuestion} className="btn-main bg-teal">SLJEDEĆE PITANJE</button>
+        <button onClick={() => { setKmLevel(null); setPair(null); setQuestion("Pritisni gumb za prvo pitanje!"); }} className="back-btn">
+          <ArrowLeft size={20} /> Promijeni kategoriju
         </button>
       </div>
     );
