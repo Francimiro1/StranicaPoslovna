@@ -1269,10 +1269,9 @@ const db = {
       "Desna ruka na partnerovom analnom području / stražnjici.",
       "Jezik na partnerovoj najosjetljivijoj točki."
     ]
-  }
-};
+  },
 
-const guessWords = {
+  guessWords:{
   "Filmovi i Serije": [
     "Titanic", "Harry Potter", "Gospodar prstenova", "Sam u kući", "Prijatelji", "Teorija velikog praska", "Igra prijestolja", "Breaking Bad", "Kum", "Matrix",
     "Avatar", "Deadpool", "Spiderman", "Batman", "Joker", "Forrest Gump", "Gladijator", "Zgodna žena", "Prljavi ples", "Bilježnica",
@@ -1345,9 +1344,7 @@ const guessWords = {
     "Skupljanje markica", "Numizmatika", "Astronomija", "Promatranje ptica", "Gledanje filmova", "Slušanje glazbe", "Sviranje gitare", "Sviranje klavira", "Pjevanje", "Ples",
     "Balet", "Breakdance", "Hip hop", "Skupljanje antikviteta", "Zbor", "Volontiranje", "Planiranje putovanja", "Kaligrafija", "Origami", "Burza"
   ]
-};
-
-const scratchCards = {  
+},
   scratchCards: [
     "Kupon za 15 minuta opuštajuće masaže cijelih leđa bez ikakvog prigovora.",
     "Kupon za doručak u krevet po tvom izboru sutra ujutro.",
@@ -1538,9 +1535,9 @@ const scratchCards = {
       "Koje javno mjesto bi mi bilo najuzbudljivije za brzi, tajni poljubac ili dodir?",
       "Što misliš da je moja najveća vrlina u krevetu?",
       "Koji je moj idealan scenarij za savršenu romantičnu i strastvenu večer u dvoje?"
-    ]
-  }
-};
+      ]
+    }
+  };
 
 /* --- NOVE LOGIKE ZA RANDOM (BLOKADA PONAVLJANJA) --- */
 const popRand = (arr) => {
